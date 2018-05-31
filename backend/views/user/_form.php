@@ -23,8 +23,8 @@ use backend\models\UserGroup;
 	
 	<?= $form->field($model,'group_id')->dropDownList(UserGroup::dropDownList(),['prompt'=>'请选择分组']);?>
 	
-	<?php  if ($model->isNewRecord){$model->status = 10;}?>
-    <?= $form->field($model, 'status')->radioList(['10' => '启用', '0' => '禁用']);?>
+	<?php  if ($model->isNewRecord){$model->status = 10;} $item = [];if($model->id == 1){$item = ['disabled' => 'true'];}?>
+    <?= $form->field($model, 'status')->radioList(['10' => '启用', '0' => '禁用'], ['itemOptions' =>  $item]);?>
 
     <div class="form-group">
         <?= Html::submitButton('保存', ['class' => 'btn btn-success']) ?>
