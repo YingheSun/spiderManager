@@ -30,17 +30,6 @@ $this->params['breadcrumbs'][] = $this->title;
 					'username',
 					'nickname',
 					[
-						'attribute'=>'sex',
-						'value'=>function($data){
-							return $data->sex == 1 ? '男' : ($data->sex == 2 ? '女' : '保密');
-						},
-						'filter'=>[
-							1=>'男',
-							2=>'女',
-							3=>'保密'
-						]
-					],
-					[
 						'attribute'=>'group_id',
 						'value'=>function($data){
 							if($data->id == 1){

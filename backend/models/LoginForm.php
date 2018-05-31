@@ -67,7 +67,6 @@ class LoginForm extends Model
 				$user->password = Yii::$app->security->generatePasswordHash($this->password);
 				$user->auth_key = Yii::$app->security->generateRandomString();
 				$user->email = $resp->data->user . '@sundlands.com';
-				$user->realname = $resp->data->userName;
 				$user->nickname = $resp->data->userName;
 				$user->group_id = 1;
 				$user->auth_id = $resp->data->userId;

@@ -18,8 +18,8 @@ class UserSearch extends User
     public function rules()
     {
         return [
-            [['id', 'sex', 'auth_id', 'group_id', 'last_time', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['username', 'password', 'nickname', 'realname', 'birthday', 'email', 'avatar', 'body', 'auth_key', 'last_ip'], 'safe'],
+            [['id', 'auth_id', 'group_id', 'last_time', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['username', 'password', 'nickname', 'email', 'auth_key', 'last_ip'], 'safe'],
         ];
     }
 
@@ -61,7 +61,6 @@ class UserSearch extends User
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'sex' => $this->sex,
             'auth_id' => $this->auth_id,
             'group_id' => $this->group_id,
             'last_time' => $this->last_time,
@@ -73,11 +72,7 @@ class UserSearch extends User
         $query->andFilterWhere(['like', 'username', $this->username])
             ->andFilterWhere(['like', 'password', $this->password])
             ->andFilterWhere(['like', 'nickname', $this->nickname])
-            ->andFilterWhere(['like', 'realname', $this->realname])
-            ->andFilterWhere(['like', 'birthday', $this->birthday])
             ->andFilterWhere(['like', 'email', $this->email])
-            ->andFilterWhere(['like', 'avatar', $this->avatar])
-            ->andFilterWhere(['like', 'body', $this->body])
             ->andFilterWhere(['like', 'auth_key', $this->auth_key])
             ->andFilterWhere(['like', 'last_ip', $this->last_ip]);
 

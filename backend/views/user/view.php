@@ -30,18 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					'id',
 					'username',
 					'nickname',
-					[
-						'attribute'=>'sex',
-						'value'=>function($data){
-							return $data->sex == 1 ? '男' : ($data->sex == 2 ? '女' : '保密');
-						}
-					],
-					'realname',
-					'birthday',
 					'email:email',
-					'avatar',
-					'auth_id',
-					'body',
 					[
 						'attribute'=>'group_id',
 						'value'=>function($data){
