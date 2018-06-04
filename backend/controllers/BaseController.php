@@ -10,7 +10,7 @@ use backend\models\UserGroup;
 
 class BaseController extends Controller
 {
-    public $domain = 'http';
+    public static $domain = 'http';
 	public function actions()
     {
         return [
@@ -22,14 +22,14 @@ class BaseController extends Controller
 	
 	public function beforeAction($action){
         if (YII_ENV == 'prod') {
-            $this->domain = 'https';
+           self::$domain = 'https';
         }
 		$uid=Yii::$app->user->id;
 		$module = $action->uniqueId;
 		if($module == 'site/login' && $uid){
-			return $this->redirect(Url::toRoute(['site/index'],$this->domain));
+			return $this->redirect(Url::toRoute(['site/index'],self::$domain));
 		}else if($module != 'site/login' && !$uid){
-			return $this->redirect(Url::toRoute(['site/login'],$this->domain));
+			return $this->redirect(Url::toRoute(['site/login'],self::$domain));
 		}else{
 			if($uid!=1 &&$module!='site/auth' && $module!='site/logout' && $module!='site/login' && $module!='api/upload'){
 				$user=User::find()->select('group_id')->where(['id'=>$uid])->one();
@@ -39,8 +39,7 @@ class BaseController extends Controller
 					if(Yii::$app->request->isAjax){
 						exit(json_encode(['code'=>1002,'msg'=>'没有权限执行此操作']));
 					}else{
-						$this->layout=false;
-						exit($this->render(Url::toRoute(['site/auth'],$this->domain)));
+						$this->redirect(Url::toRoute(['site/auth'],self::$domain));
 					}
 				}
 			}
@@ -85,7 +84,7 @@ class BaseController extends Controller
 	
 	public function actionCreate(){
         if ($this->query->load($this->getData()) && $this->query->save()) {
-            return $this->redirect(Url::toRoute(['index'],$this->domain));
+            return $this->redirect(Url::toRoute(['index'],self::$domain));
         } else {
             return $this->render('create', [
                 'model' => $this->query,
@@ -96,7 +95,7 @@ class BaseController extends Controller
 	public function actionUpdate($id){
         $model = $this->findModel($id);
         if ($model->load($this->getData()) && $model->save()) {
-            return $this->redirect(Url::toRoute(['index'],$this->domain));
+            return $this->redirect(Url::toRoute(['index'],self::$domain));
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -108,7 +107,7 @@ class BaseController extends Controller
 		$result=$this->isDel($id);
 		if($result === true){
 			$this->findModel($id)->delete();
-            return $this->redirect(Url::toRoute(['index'],$this->domain));
+            return $this->redirect(Url::toRoute(['index'],self::$domain));
 		}else{
 			echo $result;
 		}

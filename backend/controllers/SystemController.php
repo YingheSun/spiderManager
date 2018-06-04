@@ -18,7 +18,7 @@ class SystemController extends BaseController
 			$content = str_replace('array (','[',$content);
 			$content = str_replace(')',']',$content);
 			$result = file_put_contents(__DIR__.'../../../common/config/params.php',$content);
-			return $this->redirect(Url::toRoute(['index'],$this->domain));
+			return $this->redirect(Url::toRoute(['index'],self::$domain));
 		}else{
 			return $this->render('index',[
 				'list'=>$list
