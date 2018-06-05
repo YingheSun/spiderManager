@@ -21,15 +21,7 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
-<div class="wrap">
-    <?= $content ?>
-</div>
-
-<footer class="footer">
-   
-</footer>
-
+<?= $content ?>
 <?php $this->endBody() ?>
 </body>
 </html>

@@ -37,13 +37,13 @@ class SiteController extends BaseController
     public function actionLogin()
     {	
         if (!Yii::$app->user->isGuest) {
-            return $this->redirect(Url::toRoute(['site/index'],$this->domain));
+            return $this->redirect(Url::toRoute(['site/index'],self::$domain));
         }
 		
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
 			User::loginUpdate(Yii::$app->user->id);
-            return $this->redirect(Url::toRoute(['site/index'],$this->domain));
+            return $this->redirect(Url::toRoute(['site/index'],self::$domain));
         } else {
             $model->password = '';
             return $this->render('login', [
@@ -55,11 +55,11 @@ class SiteController extends BaseController
     public function actionLogout()
     {
         Yii::$app->user->logout();
-        return $this->redirect(Url::toRoute(['site/login'],$this->domain));
+        return $this->redirect(Url::toRoute(['site/login'],self::$domain));
     }
 	
 	public function actionAuth(){
 		$this->layout = false;
-        return $this->render('auth',['domain'=>$this->domain]);
+        return $this->render('auth');
     }
 }
