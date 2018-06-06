@@ -43,7 +43,7 @@ use Yii;
  * @property string $work_function1 工作职能
  * @property string $work_function2 工作职能
  * @property string $scale_responsible 负责预算规模（万元）
- * @property int $work_starttime 工作开始时间
+ * @property string $work_starttime 工作开始时间
  * @property string $annual_income 目前年收入
  * @property string $annual_income_start 起始年收入
  * @property string $management_number 负责人数
@@ -62,9 +62,7 @@ use Yii;
  * @property string $card_front 身份证正面
  * @property string $card_back 身份证反面
  * @property string $diploma_scan 毕业证扫描件
- * @property string $academic_scan 学位证扫描件
  * @property string $postgraduate_diploma_scan 研究生毕业证扫描件
- * @property string $postgraduate_academic_scan 研究生学位证扫描件
  * @property string $report_card 本科阶段成绩单
  * @property string $postgraduate_report_card 研究生阶段成绩单
  * @property string $resume_chinese 中文简历
@@ -96,14 +94,14 @@ class Signup extends \yii\db\ActiveRecord
     {
         return [
             [['member_id', 'academy_id', 'avatar', 'real_name', 'card', 'phone', 'email', 'homeplace', 'sex', 'birthday', 'marital', 'emergency_name', 'emergency_phone'], 'required'],
-            [['member_id', 'academy_id', 'fulltime_work_life', 'management_work_life', 'work_starttime', 'signup_at', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['education_start_time', 'education_end_time'], 'safe'],
-            [['other_work_experience', 'answer_1', 'answer_2', 'answer_3', 'status_reason'], 'string'],
-            [['avatar', 'email', 'homeplace', 'superior_name', 'superior_post', 'card_front', 'card_back', 'diploma_scan', 'academic_scan', 'postgraduate_diploma_scan', 'postgraduate_academic_scan', 'report_card', 'postgraduate_report_card', 'resume_chinese', 'company_organization_chart', 'resume_english', 'english_essays', 'additional_material', 'interview_batch'], 'string', 'max' => 100],
+            [['member_id', 'academy_id', 'fulltime_work_life', 'management_work_life', 'signup_at', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['education_start_time', 'education_end_time', 'work_starttime'], 'safe'],
+            [['position_situation', 'other_work_experience', 'answer_1', 'answer_2', 'answer_3', 'status_reason'], 'string'],
+            [['avatar', 'email', 'homeplace', 'superior_name', 'superior_post', 'card_front', 'card_back', 'diploma_scan', 'postgraduate_diploma_scan', 'report_card', 'postgraduate_report_card', 'resume_chinese', 'company_organization_chart', 'resume_english', 'english_essays', 'additional_material', 'interview_batch'], 'string', 'max' => 100],
             [['real_name', 'phone', 'sex', 'birthday', 'marital', 'emergency_name', 'emergency_phone', 'education', 'university_category', 'university_style', 'academic_degree', 'company_size', 'main_business', 'annual_income', 'annual_income_start', 'management_number', 'superior_phone', 'agree_contact_suoerior'], 'string', 'max' => 20],
             [['card'], 'string', 'max' => 18],
             [['university', 'chinese_company_name', 'english_company_name', 'turnover_year', 'Industry_category', 'company_nature', 'post_type', 'work_department', 'work_position', 'work_function1', 'work_function2', 'scale_responsible'], 'string', 'max' => 50],
-            [['position_situation', 'question_1', 'question_2', 'question_3'], 'string', 'max' => 255],
+            [['question_1', 'question_2', 'question_3'], 'string', 'max' => 255],
         ];
     }
 
@@ -168,9 +166,7 @@ class Signup extends \yii\db\ActiveRecord
             'card_front' => '身份证正面',
             'card_back' => '身份证反面',
             'diploma_scan' => '毕业证扫描件',
-            'academic_scan' => '学位证扫描件',
             'postgraduate_diploma_scan' => '研究生毕业证扫描件',
-            'postgraduate_academic_scan' => '研究生学位证扫描件',
             'report_card' => '本科阶段成绩单',
             'postgraduate_report_card' => '研究生阶段成绩单',
             'resume_chinese' => '中文简历',
