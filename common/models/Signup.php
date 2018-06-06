@@ -72,7 +72,7 @@ use Yii;
  * @property string $additional_material 附加材料
  * @property string $interview_batch 面试批次
  * @property int $signup_at 提交时间
- * @property int $status 状态（1：个人信息完成，2：教育背景完成，3：工作背景完成，4：文件上传完成，5：自述短文完成，6：确认并保存，7：提交）
+ * @property int $status 状态（123456：提交）
  * @property string $status_reason 未通过原因
  * @property int $created_at 申请时间
  * @property int $updated_at 编辑时间
