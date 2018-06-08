@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .condition-right-triangle {
+      top: 182px;
+    }
+    .condition-introduce{
+      width:700px;
+      font-size:18px;
+      margin:0 auto;
+    }
+    .condition-introduce-textarea{
+      width:100%;
+      height:498px;
+      margin:12px auto 49px;
+      font-size:18px;
+      word-break:break-all;
+      resize:none;
+    }
+    .condition-introduce-btn{
+      margin:24px 0 0 353px;
+    }
+    .condition-introduce-btn1{
+      display:inline-block;
+      width:136px;
+      height:59px;
+      text-align:center;
+      line-height: 59px;
+      font-size:18px;
+      color:#4A90E2;
+      margin-right:204px;
+      background:#fff;
+      border:1px solid #4A90E2;
+      border-radius:30px;
+      cursor:pointer;
+    }
+    .condition-introduce-btn2{
+      display:inline-block;
+      width:205px;
+      height:59px;
+      text-align:center;
+      line-height: 59px;
+      font-size:18px;
+      color:#fff;
+      background:#4A90E2;
+      border:1px solid #4A90E2;
+      border-radius:30px;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div class="logo">
+      <div>
+        <img src="img/logo.png" alt="" />
+        <p>尚德在线申请系统</p>
+      </div>
+      
+    </div> 
+    <div class="nav">
+      <ul class="navbar">
+        <li class=""><a href="./index.html" class="router-link-exact-active router-link-active">首页</a></li> 
+        <li class=""><a href="./school.html" class="">院校介绍</a></li> 
+        <li class="active"><a href="./condition.html" class="">在线申请</a></li> 
+        <li class="login-btn"><a href="./apply.html" class="">登录/注册</a></li> 
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="condition-banner"></div>
+    <div class="condition-content-box">
+      <div class="condition-title">
+        申请流程
+        <span>Application process</span>
+      </div>
+      <div class="condition-content">
+        <div class="condition-left">
+          <div class="condition-left-list1">
+            <a href="./application.html">
+              <div class="condition-left-branch">
+                <img src="./img/condition-personal1.png" alt="" class="condition-list-icon1">
+                <div>个人信息</div>
+                <img src="./img/condition-write.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+            <a href="./application01.html">
+              <div class="condition-left-branch">
+                <img src="./img/condition-education.png" alt="" class="condition-list-icon1">
+                <div>教育背景</div>
+                <img src="./img/condition-close.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+            <a href="./application03.html">
+              <div class="condition-left-branch">
+                <img src="./img/condition-work.png" alt="" class="condition-list-icon1">
+                <div>工作经历</div>
+                <img src="./img/condition-close.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+            <a href="./application04.html">
+              <div class="condition-left-branch">
+                <img src="./img/condition-file.png" alt="" class="condition-list-icon1">
+                <div>文件上传</div>
+                <img src="./img/condition-close.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+            <a href="./application05.html">
+              <div class="condition-left-branch condition-left-branch-active">
+                <img src="./img/condition-oneself.png" alt="" class="condition-list-icon1">
+                <div>自述短文</div>
+                <img src="./img/condition-close.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+            <a href="./application06.html">
+              <div class="condition-left-branch">
+                <img src="./img/condition-confirm.png" alt="" class="condition-list-icon1">
+                <div>确认提交</div>
+                <img src="./img/condition-close.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+          </div>
+          <div class="condition-left-list2">
+            <div class="condition-left-branch2">
+              <img src="./img/condition-link.png" alt="" class="condition-list-icon1">
+              <div style="margin:0 44px 0 10px;">常用链接</div>
+            </div>
+            <a href="#" class="condition-left-branch2 condition-left-branch2-special">
+              <div style="margin:0 9px 0 0;text-decoration:underline;">南方大学官网</div>
+              <img src="./img/condition-arrow.png" alt="" class="condition-list-icon2" style="width:15px;">
+            </a>
+            <div class="condition-left-branch2">
+              <img src="./img/condition-compass.png" alt="" class="condition-list-icon1">
+              <div style="margin:0 44px 0 10px;">申请指导</div>
+            </div>
+          </div>
+        </div>
+        <div class="condition-right">
+          <div class="condition-right-triangle"></div>
+          <!-- 个人信息 -->
+          <div class="condition-person">
+            <div class="condition-title">自述短文</div>
+            <div class="condition-introduce">
+              <div class="condition-introduce-title">
+                *1. 对您来说，什么最重要？为什么？（500字左右） 
+                <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+                </div>
+              </div>
+              <textarea name="textarea" class="condition-introduce-textarea"></textarea>
+              <div class="condition-introduce-title">
+                *2. 在PHBS的第一次课堂上，您会怎么向同学作自我介绍？（500字左右） 
+                <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+                </div>
+              </div>
+              <textarea name="textarea" class="condition-introduce-textarea"></textarea>
+              <div class="condition-introduce-title">
+               *3. 请描述一次自我超越的经历（500字左右）。讲述近3年内发生的一次经历，包括您处理事情所做的努力和经过，事情的结果如何？与事件相关的人的反应是怎样的？   
+                <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+                </div>
+              </div>
+              <textarea name="textarea" class="condition-introduce-textarea"></textarea>
+            </div>
+            <div class="condition-introduce-btn">
+                <div class="condition-introduce-btn1">保存</div>
+                <div class="condition-introduce-btn2">保存并下一步</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="clear:both;"></div>
+  <div id="footer">
+    <div class="footer-choose">
+    <ul>
+      <li>关于我们</li> 
+      <li>|</li> 
+      <li>法律声明</li> 
+      <li>|</li> 
+      <li>尚德媒体</li> 
+      <li>|</li> 
+      <li>招商加盟</li> 
+      <li>|</li> 
+      <li>尚德新闻</li> 
+      <li>|</li> 
+      <li>加入我们</li>
+    </ul>
+    </div> 
+    <div style="margin-bottom: 6px;">
+      Copyright &copy;2003-2017 北京尚德在线教育科技有限公司,All Rights Reserved 
+    </div> 
+    <div>
+      经营许可证编号：京ICP证140312号 ｜ 京ICP备14002947号－3 ｜ 京公网安备11010502027412 ｜ 京网文 【2015】 0675-305号 
+    </div>
+  </div>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/global.js"></script>
+  </body>
+</html>

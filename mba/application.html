@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/application.css">
+  <link rel="stylesheet" href="css/verify.css">
+</head>
+<body>
+  <div id="header">
+    <div class="logo">
+      <div>
+        <img src="img/logo.png" alt="" />
+        <p>尚德在线申请系统</p>
+      </div>
+      
+    </div> 
+    <div class="nav">
+      <ul class="navbar">
+        <li class=""><a href="./index.html" class="router-link-exact-active router-link-active">首页</a></li> 
+        <li class=""><a href="./school.html" class="">院校介绍</a></li> 
+        <li class="active"><a href="./application.html" class="">在线申请</a></li> 
+        <li class="login-btn"><a href="./apply.html" class="">登录/注册</a></li> 
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <!-- 登录弹窗 -->
+    <div class="login-mask">
+      <div class="login-content">
+        <div class="login-text">
+          <p class="login-title">尚德机构MBA申请系统</p>
+          <p>尚德机构，专注于学历教育，职业教育的互联网教育公司。培训课程和服务范围广阔，提供全国精品直播、录播课程等，业务涵盖上班族学历 MBA 会计师 教师证 人力等职业资格认证以及相关就业服务。</p>
+        </div>
+        <div class="login-box">
+          <p>一键登录</p>
+          <div class="login-input login-phone">
+            <span>+86</span>
+            <input class="vphone" value="" type="text" placeholder="请输入您的手机号">
+          </div>
+          <div class="login-verification">
+          </div>
+          <div class="login-input login-message">
+            <input class="vcode" type="text" placeholder="请输入短信验证码">
+            <span class="btn-vcode">获取验证码</span>
+          </div>
+          <div id="check-btn" class="login-box-btn btn-submit">立即登录</div>
+          <div class="login-tip"><span class="no-account">没有账号</span><span>立即注册</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="condition-banner"></div>
+    <div class="condition-content-box">
+      <div class="condition-title">
+        申请流程
+        <span>Application process</span>
+      </div>
+      <div class="condition-content">
+        <div class="condition-left">
+          <div class="condition-left-list1">
+            <a href="./application.html">
+              <div class="condition-left-branch condition-left-branch-active">
+                <img src="./img/condition-personal1.png" alt="" class="condition-list-icon1">
+                <div>个人信息</div>
+                <img src="./img/condition-write.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+            <a href="./application01.html">
+              <div class="condition-left-branch">
+                <img src="./img/condition-education.png" alt="" class="condition-list-icon1">
+                <div>教育背景</div>
+                <img src="./img/condition-close.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+            <a href="./application03.html">
+              <div class="condition-left-branch">
+                <img src="./img/condition-work.png" alt="" class="condition-list-icon1">
+                <div>工作经历</div>
+                <img src="./img/condition-close.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+            <a href="./application04.html">
+              <div class="condition-left-branch">
+                <img src="./img/condition-file.png" alt="" class="condition-list-icon1">
+                <div>文件上传</div>
+                <img src="./img/condition-close.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+            <a href="./application05.html">
+              <div class="condition-left-branch">
+                <img src="./img/condition-oneself.png" alt="" class="condition-list-icon1">
+                <div>自述短文</div>
+                <img src="./img/condition-close.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+            <a href="./application06.html">
+              <div class="condition-left-branch">
+                <img src="./img/condition-confirm.png" alt="" class="condition-list-icon1">
+                <div>确认提交</div>
+                <img src="./img/condition-close.png" alt="" class="condition-list-icon2">
+              </div>
+            </a>
+          </div>
+          <div class="condition-left-list2">
+            <div class="condition-left-branch2">
+              <img src="./img/condition-link.png" alt="" class="condition-list-icon1">
+              <div style="margin:0 44px 0 10px;">常用链接</div>
+            </div>
+            <a href="#" class="condition-left-branch2 condition-left-branch2-special">
+              <div style="margin:0 9px 0 0;text-decoration:underline;">南方大学官网</div>
+              <img src="./img/condition-arrow.png" alt="" class="condition-list-icon2" style="width:15px;">
+            </a>
+            <div class="condition-left-branch2">
+              <img src="./img/condition-compass.png" alt="" class="condition-list-icon1">
+              <div style="margin:0 44px 0 10px;">申请指导</div>
+            </div>
+          </div>
+        </div>
+        <div class="condition-right">
+          <div class="condition-right-triangle"></div>
+          <!-- 个人信息 -->
+          <div class="condition-person">
+            <div class="condition-person-photo">
+              <span>个人照片：</span>
+              <img class="application-file-img" src="./img/condition-photo.png"/>
+              <div style="margin:6px 0 46px 327px;">
+                <div class="condition-person-file-box">
+                  选择文件
+                  <input type="file" name="file" value="" class="condition-person-file">
+                </div>
+                <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="condition-person-branch1">
+              <span class="condition-person-explain">姓名：</span>
+              <input type="text" name="name" placeholder="请输入您的真实姓名" class="condition-person-name">
+              <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+              </div>
+              <span class="condition-person-explain" style="margin-left:56px;">身份证号：</span>
+              <input type="text" name="card" placeholder="请输入您的身份证号" class="condition-person-card">
+              <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+              </div>
+            </div>
+            <div class="condition-person-branch2">
+              <span class="condition-person-explain">性别：</span>
+              <div class="condition-person-sex condition-person-sex-sepcial" style="margin-right:14px;">男</div>
+              <div class="condition-person-sex">女</div>
+              <span class="condition-person-explain" style="margin-left:108px;">邮箱：</span>
+              <input type="email" name="email" placeholder="请输入您的邮箱" class="condition-person-email">
+              <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+              </div>
+            </div>
+            <div class="condition-person-branch3">
+              <span class="condition-person-explain">手机号：</span>
+              <input type="tel" name="phone" placeholder="请输入您的手机号" class="condition-person-phone">
+              <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+              </div>
+              <span class="condition-person-explain" style="margin-left:57px;">婚姻状况：</span>
+              <div class="condition-person-marry condition-person-marry-sepcial" style="margin-right:14px;">未婚</div>
+              <div class="condition-person-marry">已婚</div>
+            </div>
+            <div class="condition-person-branch4">
+              <span class="condition-person-explain">出生日期：</span>
+              <input type="date" name="date" class="condition-person-date">
+            </div>
+            <div class="condition-person-branch5">
+              <span class="condition-person-explain">出生地：</span>
+              <input type="text" name="place" placeholder="请输入您的出生地（具体到县/市）" class="condition-person-place">
+              <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+              </div>
+            </div>
+            <div class="condition-person-branch6">
+              <span class="condition-person-explain">紧急联系人：</span>
+              <input type="text" name="emergencyname" placeholder="请输紧急联系人姓名" class="condition-person-emergency-name">
+              <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+              </div>
+            </div>
+            <div class="condition-person-branch7">
+              <span class="condition-person-explain">紧急联系人手机：</span>
+              <input type="tel" name="emergencyphone" placeholder="请输紧急联系人姓名" class="condition-person-emergency-phone">
+              <div class="condition-note-icon">
+                  <img src="./img/condition-prompt.png" alt="">
+                  <!-- <div class="condition-note-triangle"></div>
+                  <div class="condition-note-content">
+                    提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
+                  </div> -->
+              </div>
+            </div>
+            <div class="condition-person-branch8">
+              <div class="condition-person-btn1">保存</div>
+              <div class="condition-person-btn2">保存并下一步</div>
+            </div>
+          </div>
+          <!-- 教育背景 -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="clear:both;"></div>
+  <div id="footer">
+    <div class="footer-choose">
+    <ul>
+      <li>关于我们</li> 
+      <li>|</li> 
+      <li>法律声明</li> 
+      <li>|</li> 
+      <li>尚德媒体</li> 
+      <li>|</li> 
+      <li>招商加盟</li> 
+      <li>|</li> 
+      <li>尚德新闻</li> 
+      <li>|</li> 
+      <li>加入我们</li>
+    </ul>
+    </div> 
+    <div style="margin-bottom: 6px;">
+      Copyright &copy;2003-2017 北京尚德在线教育科技有限公司,All Rights Reserved 
+    </div> 
+    <div>
+      经营许可证编号：京ICP证140312号 ｜ 京ICP备14002947号－3 ｜ 京公网安备11010502027412 ｜ 京网文 【2015】 0675-305号 
+    </div>
+  </div>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/verify.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/application.js"></script>
+  <script>
+    $(function(){
+      $('.login-mask').css('display', 'block');
+      $('body').css('overflow', 'hidden');
+      $(".condition-person-sex").click(function(){
+        $(this).addClass("condition-person-sex-sepcial").siblings().removeClass("condition-person-sex-sepcial");
+      });
+      
+      $(".condition-person-marry").click(function(){
+        $(this).addClass("condition-person-marry-sepcial").siblings().removeClass("condition-person-marry-sepcial");
+      });
+      $('.login-verification').codeVerify({
+        type : 1,
+        width : '110px',
+        height : '42px',
+        fontSize : '14px',
+        codeLength : 4,
+        btnId : 'check-btn',
+        ready : function() {
+        },
+        success : function() {
+          
+        },
+        error : function() {
+          $('.varify-input-code').val('请输入正确的验证码');
+          $('.login-verification').addClass('error-verification');
+        }
+      });
+    })
+  </script>
+  </body>
+</html>
