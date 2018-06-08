@@ -71,8 +71,9 @@ use Yii;
  * @property string $english_essays 英文申请短文
  * @property string $additional_material 附加材料
  * @property string $interview_batch 面试批次
+ * @property int $signup_step 提交材料步骤
  * @property int $signup_at 提交时间
- * @property int $status 状态（123456：提交）
+ * @property int $status 状态：0：未提交，1：审核第一步，2审核第二步，3：审核第三步，4：审核第四步，5：审核第五步，6：审核第六步，7：审核通过，8：发放offer，9：缴费完成
  * @property string $status_reason 未通过原因
  * @property int $created_at 申请时间
  * @property int $updated_at 编辑时间
@@ -84,7 +85,7 @@ class Signup extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%signup}}';
+        return 'yii_signup';
     }
 
     /**
@@ -93,8 +94,8 @@ class Signup extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['member_id', 'academy_id', 'avatar', 'real_name', 'card', 'phone', 'email', 'homeplace', 'sex', 'birthday', 'marital', 'emergency_name', 'emergency_phone'], 'required'],
-            [['member_id', 'academy_id', 'fulltime_work_life', 'management_work_life', 'signup_at', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['member_id', 'academy_id'], 'required'],
+            [['member_id', 'academy_id', 'fulltime_work_life', 'management_work_life', 'signup_step', 'signup_at', 'status', 'created_at', 'updated_at'], 'integer'],
             [['education_start_time', 'education_end_time', 'work_starttime'], 'safe'],
             [['position_situation', 'other_work_experience', 'answer_1', 'answer_2', 'answer_3', 'status_reason'], 'string'],
             [['avatar', 'email', 'homeplace', 'superior_name', 'superior_post', 'card_front', 'card_back', 'diploma_scan', 'postgraduate_diploma_scan', 'report_card', 'postgraduate_report_card', 'resume_chinese', 'company_organization_chart', 'resume_english', 'english_essays', 'additional_material', 'interview_batch'], 'string', 'max' => 100],
@@ -175,6 +176,7 @@ class Signup extends \yii\db\ActiveRecord
             'english_essays' => '英文申请短文',
             'additional_material' => '附加材料',
             'interview_batch' => '面试批次',
+            'signup_step' => '提交材料步骤',
             'signup_at' => '提交时间',
             'status' => '状态',
             'status_reason' => '未通过原因',
