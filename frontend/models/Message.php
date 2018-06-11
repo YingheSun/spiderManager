@@ -3,7 +3,7 @@
 namespace frontend\models;
 
 use Yii;
-
+use yii\behaviors\TimestampBehavior;
 /**
  * This is the model class for table "yii_message".
  *
@@ -30,6 +30,18 @@ class Message extends \yii\db\ActiveRecord
         return '{{%message}}';
     }
 
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'created_at',
+                'updatedAtAttribute' => 'updated_at',
+            ],
+        ];
+    }
+
+
     /**
      * {@inheritdoc}
      */
@@ -39,6 +51,7 @@ class Message extends \yii\db\ActiveRecord
             [['real_name', 'phone', 'education', 'work_life', 'industry'], 'required'],
             [['status', 'created_at', 'updated_at'], 'integer'],
             [['real_name', 'phone', 'education', 'work_life', 'industry'], 'string', 'max' => 20],
+            [['phone'], 'unique','message'=>'电话号码已经存在'],
         ];
     }
 
@@ -49,14 +62,14 @@ class Message extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'real_name' => 'Real Name',
-            'phone' => 'Phone',
-            'education' => 'Education',
-            'work_life' => 'Work Life',
-            'industry' => 'Industry',
-            'status' => 'Status',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'real_name' => '真实姓名',
+            'phone' => '电话号码',
+            'education' => '最高学历',
+            'work_life' => '工作年限',
+            'industry' => '行业',
+            'status' => '状态',
+            'created_at' => '创建时间',
+            'updated_at' => '更新时间',
         ];
     }
 }

@@ -8,14 +8,13 @@ class BaseController extends Controller
 {
 
     public static $domain = 'http';
-
+	
     public function init(){
         parent::init();
+		
         if (YII_ENV == 'prod') {
             self::$domain = 'https';
         }
     }
-
-
 
 }
