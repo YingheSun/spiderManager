@@ -154,7 +154,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                     <div class="condition-person">
                         <div class="condition-person-photo">
                             <span>个人照片：</span>
-                            <img class="application-file-img" src="<?=($signup->avatar?$signup->avatar:'static/images/modify.png')?>"/>
+                            <img class="application-file-img" id="img_avatar" src="<?=($signup->avatar?$signup->avatar:'static/images/modify.png')?>"/>
                             <input type="hidden" name="avatar" id="avatar" value="<?=$signup->avatar?>"/>
                             <?php if($write_step <= $step){?>
                                 <div style="margin:6px 0 46px 327px;">
