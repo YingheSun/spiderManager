@@ -70,7 +70,9 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
             $.post("<?=Url::toRoute(['member/info'],$this->context::$domain)?>",{data:data,'_csrf-frontend':'<?= Yii::$app->request->csrfToken ?>'},function(data,st){
                 //layer.close(index);
                 if(data.code===1001){
-                    layer.msg(data.msg,{icon:1,time:1000});
+                    layer.msg(data.msg,{icon:1,time:1000},function(data,st){
+                        window.location.href="<?=Url::toRoute(['member/index'],$this->context::$domain)?>";
+                    });
                 }else{
                     layer.msg(data.msg,{icon:2});
                 }

@@ -17,8 +17,8 @@ class ApiController extends BaseController
         }else if(!$captcha || $captcha != Yii::$app->session->get('captcha')){
             return json_encode(['code'=>1002,'msg'=>'验证码错误']);
         }else{
-            Yii::$app->session->set("'".$phone."'", ['code'=>'123456','time'=>time()]);
-            return json_encode(['code'=>1001,'msg'=>'验证码已发送']);
+            //Yii::$app->session->set("'".$phone."'", ['code'=>'123456','time'=>time()]);
+            //return json_encode(['code'=>1001,'msg'=>'验证码已发送']);
 
             $val = Yii::$app->session->get($phone);
             if (isset($val['time']) && $val['time']+60 > time()) {
@@ -149,7 +149,6 @@ class ApiController extends BaseController
                 $key 		= 	date('YmdHis').rand(10000,99999).'.'.$ext,
                 $body		=	fopen($file['tmp_name'],'r+')
             );
-
             $url = $result->get('ObjectURL');
             if(self::$domain == 'https'){
                 $url = str_replace('http','https',$url);
@@ -158,5 +157,16 @@ class ApiController extends BaseController
         } catch (\Exception $e) {
             return json_encode(['error' => 1, 'msg' => $e->getMessage()]);
         }
+		
+		/**
+		$savePath='/uploads/';
+		if(!is_dir($savePath)){
+			mkdir($savePath, 0777,true);
+		}
+		$ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+		$saveName=date('YmdHis').rand(10000,99999).'.'.$ext;
+		@move_uploaded_file($file["tmp_name"],$savePath.$saveName);
+		$url = '';
+		**/
     }
 }

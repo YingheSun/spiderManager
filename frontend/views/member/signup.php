@@ -30,50 +30,104 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                 <div class="condition-left-list1">
                     <a href="<?=Url::toRoute(['member/signup','academy'=>Yii::$app->request->get('academy'),'step'=>1],$this->context::$domain)?>">
                         <div class="condition-left-branch<?php if(Yii::$app->request->get('step') == '1' || Yii::$app->request->get('step') == ''){echo ' condition-left-branch-active';}?>">
-                            <img src="./static/images/condition-personal1.png" alt="" class="condition-list-icon1">
+                            <?php if(Yii::$app->request->get('step') == 1 || Yii::$app->request->get('step') == ''){?>
+							<img src="./static/images/condition-personal1.png" alt="个人信息" class="condition-list-icon1">
+							<?php }else{?>
+							<img src="./static/images/condition-personal2.png" alt="个人信息" class="condition-list-icon1">
+							<?php }?>
                             <div>个人信息</div>
                             <?php if(Yii::$app->request->get('step') == 1 || Yii::$app->request->get('step') == ''){?>
-                                <img src="./static/images/condition-write.png" alt="" class="condition-list-icon2">
+                                <img src="./static/images/condition-write.png" class="condition-list-icon2">
                             <?php }else if(strpos($signup->signup_step,'1') === false){?>
-                                <img src="./static/images/condition-close.png" alt="" class="condition-list-icon2">
+                                <img src="./static/images/condition-close.png" class="condition-list-icon2">
                             <?php }else{?>
-                                <img src="./static/images/condition-write.png" alt="" class="condition-list-icon2">
+                                <img src="./static/images/condition-right.png" class="condition-list-icon2">
                             <?php }?>
                         </div>
                     </a>
                     <a href="<?=Url::toRoute(['member/signup','academy'=>Yii::$app->request->get('academy'),'step'=>2],$this->context::$domain)?>">
                         <div class="condition-left-branch<?php if(Yii::$app->request->get('step') == '2'){echo ' condition-left-branch-active';}?>">
-                            <img src="./static/images/condition-education.png" alt="" class="condition-list-icon1">
+                            <?php if(Yii::$app->request->get('step') == 2){?>
+							<img src="./static/images/condition-education1.png" alt="教育背景" class="condition-list-icon1">
+							<?php }else{?>
+							<img src="./static/images/condition-education2.png" alt="教育背景" class="condition-list-icon1">
+							<?php }?>
                             <div>教育背景</div>
-                            <img src="./static/images/condition-close.png" alt="" class="condition-list-icon2">
+                            <?php if(Yii::$app->request->get('step') == 2){?>
+                                <img src="./static/images/condition-write.png" class="condition-list-icon2">
+                            <?php }else if(strpos($signup->signup_step,'2') === false){?>
+                                <img src="./static/images/condition-close.png" class="condition-list-icon2">
+                            <?php }else{?>
+                                <img src="./static/images/condition-right.png" class="condition-list-icon2">
+                            <?php }?>
                         </div>
                     </a>
                     <a href="<?=Url::toRoute(['member/signup','academy'=>Yii::$app->request->get('academy'),'step'=>3],$this->context::$domain)?>">
                         <div class="condition-left-branch<?php if(Yii::$app->request->get('step') == '3'){echo ' condition-left-branch-active';}?>">
-                            <img src="./static/images/condition-work.png" alt="" class="condition-list-icon1">
-                            <div>工作经历</div>
-                            <img src="./static/images/condition-close.png" alt="" class="condition-list-icon2">
+                            <?php if(Yii::$app->request->get('step') == 3){?>
+							<img src="./static/images/condition-work1.png" alt="工作经历" class="condition-list-icon1">
+							<?php }else{?>
+							<img src="./static/images/condition-work2.png" alt="工作经历" class="condition-list-icon1">
+							<?php }?>
+							<div>工作经历</div>
+                            <?php if(Yii::$app->request->get('step') == 3){?>
+                                <img src="./static/images/condition-write.png" class="condition-list-icon2">
+                            <?php }else if(strpos($signup->signup_step,'3') === false){?>
+                                <img src="./static/images/condition-close.png" class="condition-list-icon2">
+                            <?php }else{?>
+                                <img src="./static/images/condition-right.png" class="condition-list-icon2">
+                            <?php }?>
                         </div>
                     </a>
                     <a href="<?=Url::toRoute(['member/signup','academy'=>Yii::$app->request->get('academy'),'step'=>4],$this->context::$domain)?>">
                         <div class="condition-left-branch<?php if(Yii::$app->request->get('step') == '4'){echo ' condition-left-branch-active';}?>">
-                            <img src="./static/images/condition-file.png" alt="" class="condition-list-icon1">
-                            <div>文件上传</div>
-                            <img src="./static/images/condition-close.png" alt="" class="condition-list-icon2">
+                            <?php if(Yii::$app->request->get('step') == 4){?>
+							<img src="./static/images/condition-file1.png" alt="文件上传" class="condition-list-icon1">
+							<?php }else{?>
+							<img src="./static/images/condition-file2.png" alt="文件上传" class="condition-list-icon1">
+							<?php }?>
+							<div>文件上传</div>
+                            <?php if(Yii::$app->request->get('step') == 4){?>
+                                <img src="./static/images/condition-write.png" class="condition-list-icon2">
+                            <?php }else if(strpos($signup->signup_step,'4') === false){?>
+                                <img src="./static/images/condition-close.png" class="condition-list-icon2">
+                            <?php }else{?>
+                                <img src="./static/images/condition-right.png" class="condition-list-icon2">
+                            <?php }?>
                         </div>
                     </a>
                     <a href="<?=Url::toRoute(['member/signup','academy'=>Yii::$app->request->get('academy'),'step'=>5],$this->context::$domain)?>">
                         <div class="condition-left-branch<?php if(Yii::$app->request->get('step') == '5'){echo ' condition-left-branch-active';}?>">
-                            <img src="./static/images/condition-oneself.png" alt="" class="condition-list-icon1">
-                            <div>自述短文</div>
-                            <img src="./static/images/condition-close.png" alt="" class="condition-list-icon2">
+                            <?php if(Yii::$app->request->get('step') == 5){?>
+							<img src="./static/images/condition-oneself1.png" alt="自述短文" class="condition-list-icon1">
+							<?php }else{?>
+							<img src="./static/images/condition-oneself2.png" alt="自述短文" class="condition-list-icon1">
+							<?php }?>
+							<div>自述短文</div>
+                            <?php if(Yii::$app->request->get('step') == 5){?>
+                                <img src="./static/images/condition-write.png" class="condition-list-icon2">
+                            <?php }else if(strpos($signup->signup_step,'5') === false){?>
+                                <img src="./static/images/condition-close.png" class="condition-list-icon2">
+                            <?php }else{?>
+                                <img src="./static/images/condition-right.png" class="condition-list-icon2">
+                            <?php }?>
                         </div>
                     </a>
                     <a href="<?=Url::toRoute(['member/signup','academy'=>Yii::$app->request->get('academy'),'step'=>6],$this->context::$domain)?>">
                         <div class="condition-left-branch<?php if(Yii::$app->request->get('step') == '6'){echo ' condition-left-branch-active';}?>">
-                            <img src="./static/images/condition-confirm.png" alt="" class="condition-list-icon1">
-                            <div>确认提交</div>
-                            <img src="./static/images/condition-close.png" alt="" class="condition-list-icon2">
+                            <?php if(Yii::$app->request->get('step') == 6){?>
+							<img src="./static/images/condition-confirm1.png" alt="确认提交" class="condition-list-icon1">
+							<?php }else{?>
+							<img src="./static/images/condition-confirm2.png" alt="确认提交" class="condition-list-icon1">
+							<?php }?>
+							<div>确认提交</div>
+                            <?php if(Yii::$app->request->get('step') == 6){?>
+                                <img src="./static/images/condition-write.png" class="condition-list-icon2">
+                            <?php }else if(strpos($signup->signup_step,'6') === false){?>
+                                <img src="./static/images/condition-close.png" class="condition-list-icon2">
+                            <?php }else{?>
+                                <img src="./static/images/condition-right.png" class="condition-list-icon2">
+                            <?php }?>
                         </div>
                     </a>
                 </div>
@@ -82,7 +136,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                         <img src="./static/images/condition-link.png" alt="" class="condition-list-icon1">
                         <div style="margin:0 44px 0 10px;">常用链接</div>
                     </div>
-                    <a href="#" class="condition-left-branch2 condition-left-branch2-special">
+                    <a href="http://www.southern.net.cn/" target="_blank" class="condition-left-branch2 condition-left-branch2-special">
                         <div style="margin:0 9px 0 0;text-decoration:underline;">南方大学官网</div>
                         <img src="./static/images/condition-arrow.png" alt="" class="condition-list-icon2" style="width:15px;">
                     </a>
@@ -100,18 +154,11 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                     <div class="condition-person">
                         <div class="condition-person-photo">
                             <span>个人照片：</span>
-                            <img class="application-file-img" src="<?=$signup->avatar?>"/>
+                            <img class="application-file-img" src="<?=($signup->avatar?$signup->avatar:'static/images/modify.png')?>"/>
                             <input type="hidden" name="avatar" id="avatar" value="<?=$signup->avatar?>"/>
                             <?php if($write_step <= $step){?>
                                 <div style="margin:6px 0 46px 327px;">
                                     <a href="javascript:void(0);" class="condition-person-file-box" onclick = "upload('avatar',this,1001,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">选择文件</a>
-                                    <div class="condition-note-icon">
-                                        <img src="./static/images/condition-prompt.png" alt="">
-                                        <!-- <div class="condition-note-triangle"></div>
-                                        <div class="condition-note-content">
-                                          提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                        </div> -->
-                                    </div>
                                 </div>
                             <?php }?>
                         </div>
@@ -119,26 +166,12 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             <span class="condition-person-explain">姓名：</span>
                             <?php if($write_step <= $step){?>
                                 <input type="text" name="real_name" id="real_name" value="<?=$signup->real_name?>" placeholder="请输入您的真实姓名" class="condition-person-name">
-                                <div class="condition-note-icon">
-                                    <img src="./static/images/condition-prompt.png" alt="">
-                                    <!-- <div class="condition-note-triangle"></div>
-                                    <div class="condition-note-content">
-                                      提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                    </div> -->
-                                </div>
                             <?php }else{?>
                                 <span class="show-text"><?=$signup->real_name?></span>
                             <?php }?>
                             <span class="condition-person-explain" style="margin-left:80px;">身份证号：</span>
                             <?php if($write_step <= $step){?>
                                 <input type="text" name="card" id="card" value="<?=$signup->card?>" placeholder="请输入您的身份证号" class="condition-person-card">
-                                <div class="condition-note-icon">
-                                    <img src="./static/images/condition-prompt.png" alt="">
-                                    <!-- <div class="condition-note-triangle"></div>
-                                    <div class="condition-note-content">
-                                      提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                    </div> -->
-                                </div>
                             <?php }else{?>
                                 <span class="show-text"><?=$signup->card?></span>
                             <?php }?>
@@ -154,17 +187,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <span class="show-text"><?=$signup->sex?></span>
                             <?php }?>
 
-                            <span class="condition-person-explain" style="margin-left:<?php if($write_step <= $step){?>132<?php }else{?>108<?php }?>px;">邮箱：</span>
+                            <span class="condition-person-explain" style="margin-left:104px;">邮箱：</span>
 
                             <?php if($write_step <= $step){?>
                                 <input type="email" name="email" id="email" value="<?=$signup->email?>" placeholder="请输入您的邮箱" class="condition-person-email">
-                                <div class="condition-note-icon">
-                                    <img src="./static/images/condition-prompt.png" alt="">
-                                    <!-- <div class="condition-note-triangle"></div>
-                                    <div class="condition-note-content">
-                                      提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                    </div> -->
-                                </div>
                             <?php }else{?>
                                 <span class="show-text"><?=$signup->email?></span>
                             <?php }?>
@@ -173,13 +199,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             <span class="condition-person-explain">手机号：</span>
                             <?php if($write_step <= $step){?>
                                 <input type="tel" name="phone" id="phone" value="<?=$signup->phone?>" placeholder="请输入您的手机号" class="condition-person-phone">
-                                <div class="condition-note-icon">
-                                    <img src="./static/images/condition-prompt.png" alt="">
-                                    <!-- <div class="condition-note-triangle"></div>
-                                    <div class="condition-note-content">
-                                      提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                    </div> -->
-                                </div>
                             <?php }else{?>
                                 <span class="show-text"><?=$signup->phone?></span>
                             <?php }?>
@@ -197,7 +216,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                         <div class="condition-person-branch4">
                             <span class="condition-person-explain">出生日期：</span>
                             <?php if($write_step <= $step){?>
-                                <input type="text" name="birthday" class="condition-person-date" id="birthday" readonly="readonly" value="<?=$signup->birthday?>" onfocus="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})"/>
+                                <input type="text" name="birthday" class="condition-person-date" id="birthday" placeholder="请选择出生日期" readonly="readonly" value="<?=$signup->birthday?>" onfocus="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})"/>
                             <?php }else{?>
                                 <span class="show-text"><?=$signup->birthday?></span>
                             <?php }?>
@@ -206,13 +225,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             <span class="condition-person-explain">出生地：</span>
                             <?php if($write_step <= $step){?>
                                 <input type="text" name="homeplace" id="homeplace" value="<?=$signup->homeplace?>" placeholder="请输入您的出生地（具体到县/市）" class="condition-person-place">
-                                <div class="condition-note-icon">
-                                    <img src="./static/images/condition-prompt.png" alt="">
-                                    <!-- <div class="condition-note-triangle"></div>
-                                    <div class="condition-note-content">
-                                      提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                    </div> -->
-                                </div>
                             <?php }else{?>
                                 <span class="show-text"><?=$signup->homeplace?></span>
                             <?php }?>
@@ -221,13 +233,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             <span class="condition-person-explain">紧急联系人：</span>
                             <?php if($write_step <= $step){?>
                                 <input type="text" name="emergency_name" id="emergency_name" value="<?=$signup->emergency_name?>" placeholder="请输紧急联系人姓名" class="condition-person-emergency-name">
-                                <div class="condition-note-icon">
-                                    <img src="./static/images/condition-prompt.png" alt="">
-                                    <!-- <div class="condition-note-triangle"></div>
-                                    <div class="condition-note-content">
-                                      提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                    </div> -->
-                                </div>
                             <?php }else{?>
                                 <span class="show-text"><?=$signup->emergency_name?></span>
                             <?php }?>
@@ -235,14 +240,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                         <div class="condition-person-branch7">
                             <span class="condition-person-explain">紧急联系人手机：</span>
                             <?php if($write_step <= $step){?>
-                                <input type="tel" name="emergency_phone" id="emergency_phone" value="<?=$signup->emergency_phone?>" placeholder="请输紧急联系人姓名" class="condition-person-emergency-phone">
-                                <div class="condition-note-icon">
-                                    <img src="./static/images/condition-prompt.png" alt="">
-                                    <!-- <div class="condition-note-triangle"></div>
-                                    <div class="condition-note-content">
-                                      提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                    </div> -->
-                                </div>
+                                <input type="tel" name="emergency_phone" id="emergency_phone" value="<?=$signup->emergency_phone?>" placeholder="请输紧急联系人手机" class="condition-person-emergency-phone">
                             <?php }else{?>
                                 <span class="show-text"><?=$signup->emergency_phone?></span>
                             <?php }?>
@@ -252,8 +250,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="condition-person-btn1" id="save">保存</div>
                                 <div class="condition-person-btn2" id="next">保存并下一步</div>
                             </div>
-
-
                             <script>
                                 <?php $this->beginBlock('signup') ?>
                                 $(document).ready(function(){
@@ -280,50 +276,77 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                     data.academy_id = $("#academy").val();
                                     data.avatar = $.trim($("#avatar").val());
                                     if(data.avatar === ''){
-                                        layer.msg('请上传照片',{icon:2});
+										layer.tips('请上传照片', '.condition-person-file-box', {
+										  tips: [2, '#f00']
+										});
+										$(".condition-person-file-box").focus();
                                         return false;
                                     }
                                     data.real_name = $.trim($("#real_name").val());
                                     if(data.real_name === '' || !NameValid(data.real_name)){
-                                        layer.msg('请输入正确的姓名',{icon:2});
+										layer.tips('请输入正确的姓名', '#real_name', {
+										  tips: [2,'#f00']
+										});
+										$("#real_name").focus();
                                         return false;
                                     }
                                     data.card = $.trim($("#card").val());
                                     let card_tip = IdentityCodeValid(data.card);
                                     if(card_tip !== ''){
-                                        layer.msg(card_tip,{icon:2});
+										layer.tips(card_tip, '#card', {
+										  tips: [2,'#f00']
+										});
+										$("#card").focus();
                                         return false;
                                     }
                                     data.phone = $.trim($("#phone").val());
                                     if(data.phone === '' || !PhoneValid(data.phone)){
-                                        layer.msg('请输入正确的手机号',{icon:2});
+										layer.tips('请输入正确的手机号', '#phone', {
+										  tips: [2,'#f00']
+										});
+										$("#phone").focus();
                                         return false;
                                     }
                                     data.email = $.trim($("#email").val());
                                     if(data.email === '' || !EmailValid(data.email)){
-                                        layer.msg('请输入正确的邮箱',{icon:2});
-                                        return false;
-                                    }
-                                    data.homeplace = $.trim($("#homeplace").val());
-                                    if(data.homeplace === ''){
-                                        layer.msg('请输入出生地',{icon:2});
+										layer.tips('请输入正确的邮箱', '#email', {
+										  tips: [2,'#f00']
+										});
+										$("#email").focus();
                                         return false;
                                     }
                                     data.sex = $.trim($("#sex").val());
                                     data.birthday = $.trim($("#birthday").val());
                                     if(data.birthday === ''){
-                                        layer.msg('请选择出生日期',{icon:2});
+										layer.tips('请选择出生日期', '#birthday', {
+										  tips: [2,'#f00']
+										});
+										$("#birthday").focus();
+                                        return false;
+                                    }
+									data.homeplace = $.trim($("#homeplace").val());
+                                    if(data.homeplace === ''){
+										layer.tips('请输入出生地', '#homeplace', {
+										  tips: [2,'#f00']
+										});
+										$("#homeplace").focus();
                                         return false;
                                     }
                                     data.marital = $.trim($("#marital").val());
                                     data.emergency_name = $.trim($("#emergency_name").val());
                                     if(data.emergency_name === '' || !NameValid(data.emergency_name)){
-                                        layer.msg('请输入正确的紧急联系人',{icon:2});
+										layer.tips('请输入正确的紧急联系人', '#emergency_name', {
+										  tips: [2,'#f00']
+										});
+										$("#emergency_name").focus();
                                         return false;
                                     }
                                     data.emergency_phone = $.trim($("#emergency_phone").val());
                                     if(data.emergency_phone === '' || !PhoneValid(data.emergency_phone)){
-                                        layer.msg('请输入正确的紧急联系人手机号',{icon:2});
+                                        layer.tips('请输入正确的紧急联系人手机号', '#emergency_phone', {
+										  tips: [2,'#f00']
+										});
+										$("#emergency_phone").focus();
                                         return false;
                                     }
                                     data.step = 1;
@@ -365,13 +388,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">博士研究生</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div>-->
-                                        </div>
                                     <?php }else{?>
                                         <?=$signup->education?>
                                     <?php }?>
@@ -381,14 +397,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>最高学历开始时间:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input id="d5221" name="education_start_time" value="<?=$signup->education_start_time?>" class="input-body" type="text" onfocus="var d5222=$dp.$('d5222');WdatePicker({dateFmt:'yyyy-MM-dd'/*,onpicked:function(){d5222.click();}*/,maxDate:'#F{ $dp.$D(\'d5222\')}' })"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input id="d5221" name="education_start_time" placeholder="请选择最高学历开始时间" value="<?=$signup->education_start_time?>" class="input-body" type="text" onfocus="var d5222=$dp.$('d5222');WdatePicker({dateFmt:'yyyy-MM-dd'/*,onpicked:function(){d5222.click();}*/,maxDate:'#F{ $dp.$D(\'d5222\')}' })"/>
                                     <?php }else{?>
                                         <?=$signup->education_start_time?>
                                     <?php }?>
@@ -398,14 +407,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>最高学历截止时间:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input id="d5222" name="education_end_time" value="<?=$signup->education_end_time?>" class="input-body" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{ $dp.$D(\'d5221\') }'})"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input id="d5222" name="education_end_time" placeholder="请选择最高学历截止时间" value="<?=$signup->education_end_time?>" class="input-body" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{ $dp.$D(\'d5221\') }'})"/>
                                     <?php }else{?>
                                         <?=$signup->education_end_time?>
                                     <?php }?>
@@ -415,14 +417,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>最高学历毕业院校:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="university" id="university" class="input-body" value="<?=$signup->university?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="university" placeholder="请输入最高学历毕业院校" id="university" class="input-body" value="<?=$signup->university?>"/>
                                     <?php }else{?>
                                         <?=$signup->university?>
                                     <?php }?>
@@ -443,13 +438,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                         <label><input type="radio" name="university_category" value="三本" <?php if($signup->university_category=='三本'){echo 'checked="true"';}?>>三本</label>
                                         <label><input type="radio" name="university_category" value="大专" <?php if($signup->university_category=='大专'){echo 'checked="true"';}?>>大专</label>
                                         <label><input type="radio" name="university_category" value="海外院校" <?php if($signup->university_category=='海外院校'){echo 'checked="true"';}?>>海外院校</label>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
                                     </div>
                                 <?php }else{?>
                                     <?=$signup->university_category?>
@@ -457,10 +445,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content" style="margin-bottom: 100px;">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>最高学历院校学习方式:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>最高学历院校学习方式:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
                                         <div class="input-body section">
-                                            <div class="section-content" id="university_style"><?php if($signup->university_style!=''){echo $signup->university_style;}else{echo '请选择';}?></div>
+                                            <div class="section-content" id="university_style"><?php if($signup->university_style!=''){echo $signup->university_style;}else{echo '请选择学习方式';}?></div>
                                             <ul class="down-box">
                                                 <li class="option">脱产（全日制）</li>
                                                 <li class="option">在职</li>
@@ -468,13 +456,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">函授</li>
                                                 <li class="option">其他</li>
                                             </ul>
-                                        </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
                                         </div>
                                     <?php }else{?>
                                         <?=$signup->university_style?>
@@ -493,13 +474,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">学士</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
                                     <?php }else{?>
                                         <?=$signup->education2?>
                                     <?php }?>
@@ -513,14 +487,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                         本/专科院校:&nbsp;
                                     </p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="academy2" id="academy2" class="input-body" value="<?=$signup->academy2?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="academy2" placeholder="请输入本/专科院校" id="academy2" class="input-body" value="<?=$signup->academy2?>"/>
                                     <?php }else{?>
                                         <?=$signup->academy2?>
                                     <?php }?>
@@ -529,10 +496,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
 
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>学习方式:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>学习方式:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
                                         <div class="input-body section">
-                                            <div class="section-content" id="university_style2"><?php if($signup->university_style2!=''){echo $signup->university_style2;}else{echo '请选择';}?></div>
+                                            <div class="section-content" id="university_style2"><?php if($signup->university_style2!=''){echo $signup->university_style2;}else{echo '请选择学习方式';}?></div>
                                             <ul class="down-box">
                                                 <li class="option">脱产（全日制）</li>
                                                 <li class="option">在职</li>
@@ -540,13 +507,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">函授</li>
                                                 <li class="option">其他</li>
                                             </ul>
-                                        </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
                                         </div>
                                     <?php }else{?>
                                         <?=$signup->university_style2?>
@@ -559,18 +519,11 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                     <p class="input-title"><span class="required">*</span>学历:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
                                         <div class="input-body section">
-                                            <div class="section-content" id="university_degree2"><?php if($signup->university_degree2!=''){echo $signup->university_degree2;}else{echo '请选择学位';}?></div>
+                                            <div class="section-content" id="university_degree2"><?php if($signup->university_degree2!=''){echo $signup->university_degree2;}else{echo '请选择学历';}?></div>
                                             <ul class="down-box">
                                                 <li class="option">大专</li>
                                                 <li class="option">本科</li>
                                             </ul>
-                                        </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
                                         </div>
                                     <?php }else{?>
                                         <?=$signup->university_degree2?>
@@ -592,13 +545,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                         <label><input type="radio" name="university_category2" value="三本" <?php if($signup->university_category2=='三本'){echo 'checked="true"';}?>>三本</label>
                                         <label><input type="radio" name="university_category2" value="大专" <?php if($signup->university_category2=='大专'){echo 'checked="true"';}?>>大专</label>
                                         <label><input type="radio" name="university_category2" value="海外院校" <?php if($signup->university_category2=='海外院校'){echo 'checked="true"';}?>>海外院校</label>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
                                     </div>
                                 <?php }else{?>
                                     <?=$signup->university_category2?>
@@ -614,13 +560,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">学士</li>
                                                 <li class="option">无</li>
                                             </ul>
-                                        </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
                                         </div>
                                     <?php }else{?>
                                         <?=$signup->degree2?>
@@ -641,13 +580,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">专科</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
                                     <?php }else{?>
                                         <?=$signup->category2?>
                                     <?php }?>
@@ -658,14 +590,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                     <p class="input-title">
                                         <span class="required">*</span>学历证书编号:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="education_number2" id="education_number2" class="input-body" value="<?=$signup->education_number2?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="education_number2" placeholder="请输入学历证书编号" id="education_number2" class="input-body" value="<?=$signup->education_number2?>"/>
                                     <?php }else{?>
                                         <?=$signup->education_number2?>
                                     <?php }?>
@@ -675,14 +600,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>专业:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="education_major2" id="education_major2" class="input-body" value="<?=$signup->education_major2?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="education_major2" placeholder="请输入专业" id="education_major2" class="input-body" value="<?=$signup->education_major2?>"/>
                                     <?php }else{?>
                                         <?=$signup->education_major2?>
                                     <?php }?>
@@ -691,7 +609,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>专业类别:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>专业类别:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
                                         <div class="input-body section">
                                             <div class="section-content" id="major_category2"><?php if($signup->major_category2!=''){echo $signup->major_category2;}else{echo '请选择专业类别';}?></div>
@@ -711,13 +629,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">艺术学</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
                                     <?php }else{?>
                                         <?=$signup->major_category2?>
                                     <?php }?>
@@ -725,16 +636,9 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>专业内排名/本专业人数:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>专业内排名/本专业人数:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="professional_ranking2" id="professional_ranking2" class="input-body" value="<?=$signup->professional_ranking2?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="professional_ranking2" placeholder="请输入专业内排名/本专业人数" id="professional_ranking2" class="input-body" value="<?=$signup->professional_ranking2?>"/>
                                     <?php }else{?>
                                         <?=$signup->professional_ranking2?>
                                     <?php }?>
@@ -744,14 +648,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>学位证书编号:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="educations_number2" id="educations_number2" class="input-body" value="<?=$signup->educations_number2?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="educations_number2" placeholder="请输入学位证书编号" id="educations_number2" class="input-body" value="<?=$signup->educations_number2?>"/>
                                     <?php }else{?>
                                         <?=$signup->educations_number2?>
                                     <?php }?>
@@ -764,14 +661,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                         入学时间:&nbsp;
                                     </p>
                                     <?php if($write_step <= $step){?>
-                                        <input id="d6221" name="education_start_time2" value="<?=$signup->education_start_time2?>" class="input-body" type="text" onfocus="var d6222=$dp.$('d6222');WdatePicker({dateFmt:'yyyy-MM-dd'/*,onpicked:function(){d6222.click();}*/,maxDate:'#F{ $dp.$D(\'d6222\')}' })"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input id="d6221" name="education_start_time2" placeholder="请选择入学时间" value="<?=$signup->education_start_time2?>" class="input-body" type="text" onfocus="var d6222=$dp.$('d6222');WdatePicker({dateFmt:'yyyy-MM-dd'/*,onpicked:function(){d6222.click();}*/,maxDate:'#F{ $dp.$D(\'d6222\')}' })"/>
                                     <?php }else{?>
                                         <?=$signup->education_start_time2?>
                                     <?php }?>
@@ -784,14 +674,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                         毕业时间:&nbsp;
                                     </p>
                                     <?php if($write_step <= $step){?>
-                                        <input id="d6222" name="education_end_time2" value="<?=$signup->education_end_time2?>" class="input-body" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{ $dp.$D(\'d6221\') }'})"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input id="d6222" name="education_end_time2" placeholder="请选择毕业时间" value="<?=$signup->education_end_time2?>" class="input-body" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{ $dp.$D(\'d6221\') }'})"/>
                                     <?php }else{?>
                                         <?=$signup->education_end_time2?>
                                     <?php }?>
@@ -799,10 +682,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box" style="margin-bottom: 100px;">
-                                    <p class="input-title"><span class="required">*</span>备注:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>备注:&nbsp;</p>
                                     <div class="div-content">
                                         <?php if($write_step <= $step){?>
-                                            <div contenteditable="true" id="education_content2"><?=$signup->education_content2?></div>
+										<textarea name="education_content2" placeholder="请输入备注" id="education_content2"><?=$signup->education_content2?></textarea>
                                         <?php }else{?>
                                             <?=$signup->education_content2?>
                                         <?php }?>
@@ -811,7 +694,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>其他学历:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>其他学历:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
                                         <div class="input-body section">
                                             <div class="section-content" id="education3"><?php if($signup->education3 != ''){echo $signup->education3;}else{echo '请选择其他学历';}?></div>
@@ -826,13 +709,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">非全日制大专</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
                                     <?php }else{?>
                                         <?=$signup->education3?>
                                     <?php }?>
@@ -840,16 +716,9 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>毕业院校:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>毕业院校:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="academy3" id="academy3" class="input-body" value="<?=$signup->academy3?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="academy3" placeholder="请输入毕业院校" id="academy3" class="input-body" value="<?=$signup->academy3?>"/>
                                     <?php }else{?>
                                         <?=$signup->academy3?>
                                     <?php }?>
@@ -857,7 +726,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>学习方式:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>学习方式:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
                                         <div class="input-body section">
                                             <div class="section-content" id="university_style3"><?php if($signup->university_style3!=''){echo $signup->university_style3;}else{echo '请选择学习方式';}?></div>
@@ -869,13 +738,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">其他</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
                                     <?php }else{?>
                                         <?=$signup->university_style3?>
                                     <?php }?>
@@ -883,21 +745,14 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>学历:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>学历:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
                                         <div class="input-body section">
-                                            <div class="section-content" id="university_degree3"><?php if($signup->university_degree3!=''){echo $signup->university_degree3;}else{echo '请选择学位';}?></div>
+                                            <div class="section-content" id="university_degree3"><?php if($signup->university_degree3!=''){echo $signup->university_degree3;}else{echo '请选择学历';}?></div>
                                             <ul class="down-box">
                                                 <li class="option">大专</li>
                                                 <li class="option">本科</li>
                                             </ul>
-                                        </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
                                         </div>
                                     <?php }else{?>
                                         <?=$signup->university_degree3?>
@@ -905,7 +760,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                             </div>
                             <div class="checkbox">
-                                <div class="checkbox-title"><span>*</span>最高学历毕业院校分类:&nbsp;</div>
+                                <div class="checkbox-title"><span></span>最高学历毕业院校分类:&nbsp;</div>
                                 <?php if($write_step <= $step){?>
                                     <div class="radio-box">
                                         <label><input type="radio" name="university_category3" value="双一流" <?php if($signup->university_category3=='双一流'){echo 'checked="true"';}?>>双一流</label>
@@ -916,13 +771,6 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                         <label><input type="radio" name="university_category3" value="三本" <?php if($signup->university_category3=='三本'){echo 'checked="true"';}?>>三本</label>
                                         <label><input type="radio" name="university_category3" value="大专" <?php if($signup->university_category3=='大专'){echo 'checked="true"';}?>>大专</label>
                                         <label><input type="radio" name="university_category3" value="海外院校" <?php if($signup->university_category3=='海外院校'){echo 'checked="true"';}?>>海外院校</label>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
                                     </div>
                                 <?php }else{?>
                                     <?=$signup->university_category3?>
@@ -930,16 +778,9 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>学历证书编号:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>学历证书编号:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="education_number3" id="education_number3" class="input-body" value="<?=$signup->education_number3?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="education_number3" placeholder="请输入学历证书编号" id="education_number3" class="input-body" value="<?=$signup->education_number3?>"/>
                                     <?php }else{?>
                                         <?=$signup->education_number3?>
                                     <?php }?>
@@ -947,16 +788,9 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>专业:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>专业:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="education_major3" id="education_major3" class="input-body" value="<?=$signup->education_major3?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="education_major3" placeholder="请输入专业" id="education_major3" class="input-body" value="<?=$signup->education_major3?>"/>
                                     <?php }else{?>
                                         <?=$signup->education_major3?>
                                     <?php }?>
@@ -964,7 +798,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>专业类别:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>专业类别:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
                                         <div class="input-body section">
                                             <div class="section-content" id="major_category3"><?php if($signup->major_category3!=''){echo $signup->major_category3;}else{echo '请选择专业类别';}?></div>
@@ -984,13 +818,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">艺术学</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        
                                     <?php }else{?>
                                         <?=$signup->major_category3?>
                                     <?php }?>
@@ -998,16 +826,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>专业内排名/本专业人数:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>专业内排名/本专业人数:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="professional_ranking3" id="professional_ranking3" class="input-body" value="<?=$signup->professional_ranking3?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="professional_ranking3" placeholder="请输入专业内排名/本专业人数" id="professional_ranking3" class="input-body" value="<?=$signup->professional_ranking3?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->professional_ranking3?>
                                     <?php }?>
@@ -1015,16 +837,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>学历证书编号:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>学历证书编号:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="educations_number3" id="educations_number3" class="input-body" value="<?=$signup->educations_number3?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="educations_number3" placeholder="请输入学历证书编号" id="educations_number3" class="input-body" value="<?=$signup->educations_number3?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->educations_number3?>
                                     <?php }?>
@@ -1032,16 +848,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>入学时间:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>入学时间:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input id="d7221" name="education_start_time3" value="<?=$signup->education_start_time3?>" class="input-body" type="text" onfocus="var d7222=$dp.$('d7222');WdatePicker({dateFmt:'yyyy-MM-dd'/*,onpicked:function(){d7222.click();}*/,maxDate:'#F{ $dp.$D(\'d7222\')}' })"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input id="d7221" name="education_start_time3" placeholder="请选择入学时间" value="<?=$signup->education_start_time3?>" class="input-body" type="text" onfocus="var d7222=$dp.$('d7222');WdatePicker({dateFmt:'yyyy-MM-dd'/*,onpicked:function(){d7222.click();}*/,maxDate:'#F{ $dp.$D(\'d7222\')}' })"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->education_start_time3?>
                                     <?php }?>
@@ -1049,16 +859,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>毕业时间:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>毕业时间:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input id="d7222" name="education_end_time3" value="<?=$signup->education_end_time3?>" class="input-body" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{ $dp.$D(\'d7221\') }'})"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input id="d7222" name="education_end_time3" placeholder="请选择毕业时间" value="<?=$signup->education_end_time3?>" class="input-body" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{ $dp.$D(\'d7221\') }'})"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->education_end_time3?>
                                     <?php }?>
@@ -1066,10 +870,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box" style="margin-bottom: 100px;">
-                                    <p class="input-title"><span class="required">*</span>备注:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>备注:&nbsp;</p>
                                     <div class="div-content">
                                         <?php if($write_step <= $step){?>
-                                            <div contenteditable="true" id="education_content3"><?=$signup->education_content3?></div>
+											<textarea name="education_content3" placeholder="请输入备注" id="education_content3"><?=$signup->education_content3?></textarea>
                                         <?php }else{?>
                                             <?=$signup->education_content3?>
                                         <?php }?>
@@ -1099,180 +903,282 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                         let data = {};
                                         data.academy_id = $("#academy").val();
                                         data.education = $.trim($('#education').text());
-                                        if(data.education === ''){
-                                            $('#education').focus();
+                                        if(data.education === '请选择最高学历'){
+                                            layer.tips('请选择最高学历', '#education', {
+												tips: [2,'#f00']
+											});
+											$("html, body").animate({scrollTop: $("#education").offset().top-150},0);
                                             return false;
                                         }
                                         data.education_start_time = $.trim($('#d5221').val());
                                         if(data.education_start_time === ''){
-                                            $('#d5221').focus();
+                                            layer.tips('请选择最高学历开始时间', '#d5221', {
+												tips: [2,'#f00']
+											});
+											$("#d5221").focus();
                                             return false;
                                         }
                                         data.education_end_time = $.trim($('#d5222').val());
                                         if(data.education_end_time === ''){
-                                            $('#d5222').focus();
+                                            layer.tips('请选择最高学历截止时间', '#d5222', {
+												tips: [2,'#f00']
+											});
+											$("#d5222").focus();
                                             return false;
                                         }
                                         data.university = $.trim($('#university').val());
                                         if(data.university === ''){
-                                            $('#university').focus();
+                                            layer.tips('请输入最高学历毕业院校', '#university', {
+												tips: [2,'#f00']
+											});
+											$("#university").focus();
                                             return false;
                                         }
                                         data.university_category = $.trim($(":radio[name^='university_category']:checked").val());
                                         if(data.university_category === ''){
-                                            $(":radio[name^='university_category']").focus();
+											layer.msg('请选择最高学历毕业院校分类',{icon:2});
+											$("html, body").animate({scrollTop: $(":radio[name^='university_category']").offset().top-150},0);
                                             return false;
                                         }
                                         data.university_style = $.trim($('#university_style').text());
-                                        if(data.university_style === ''){
-                                            $('#university_style').focus();
-                                            return false;
+                                        if(data.university_style === '请选择学习方式'){
+											data.university_style = '';
+                                        //    layer.tips('请选择最高学历院校学习方式', '#university_style', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("html, body").animate({scrollTop: $("#university_style").offset().top-150},0);
+                                        //    return false;
                                         }
                                         data.education2 = $.trim($('#education2').text());
-                                        if(data.education2 === ''){
-                                            $('#education2').focus();
+                                        if(data.education2 === '请选择最高学历'){
+                                            layer.tips('请选择最高学历', '#education2', {
+												tips: [2,'#f00']
+											});
+											$("html, body").animate({scrollTop: $("#education2").offset().top-150},0);
                                             return false;
                                         }
                                         data.academy2 = $.trim($('#academy2').val());
                                         if(data.academy2 === ''){
-                                            $('#academy2').focus();
+                                            layer.tips('请输入本/专科院校', '#academy2', {
+												tips: [2,'#f00']
+											});
+											$("#academy2").focus();
                                             return false;
                                         }
                                         data.university_style2 = $.trim($('#university_style2').text());
-                                        if(data.university_style2 === ''){
-                                            $('#university_style2').focus();
-                                            return false;
+                                        if(data.university_style2 === '请选择学习方式'){
+										data.university_style2 = '';	
+                                        //    layer.tips('请选择学习方式', '#university_style2', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("html, body").animate({scrollTop: $("#university_style2").offset().top-150},0);
+                                        //    return false;
                                         }
                                         data.university_degree2 = $.trim($('#university_degree2').text());
-                                        if(data.university_degree2 === ''){
-                                            $('#university_degree2').focus();
+                                        if(data.university_degree2 === '请选择学历'){
+                                            layer.tips('请选择学历', '#university_degree2', {
+												tips: [2,'#f00']
+											});
+											$("html, body").animate({scrollTop: $("#university_degree2").offset().top-150},0);
                                             return false;
                                         }
                                         data.university_category2 = $.trim($(":radio[name^='university_category2']:checked").val());
                                         if(data.university_category2 === ''){
-                                            $(":radio[name^='university_category2']").focus();
+											layer.msg('本/专科毕业院校分类', {icon:2});
+											$("html, body").animate({scrollTop: $(":radio[name^='university_category2']").offset().top-150},0);
                                             return false;
                                         }
 
                                         data.degree2 = $.trim($('#degree2').text());
-                                        if(data.degree2 === ''){
-                                            $('#degree2').focus();
+                                        if(data.degree2 === '请选择本/专科学位'){
+											layer.tips('请选择本/专科学位', '#degree2', {
+												tips: [2,'#f00']
+											});
+											$("html, body").animate({scrollTop: $("#degree2").offset().top-150},0);
                                             return false;
                                         }
 
                                         data.category2 = $.trim($("#category2").text());
-                                        if(data.category2 === ''){
-                                            $("#category2").focus();
+                                        if(data.category2 === '请选择分类'){
+                                            layer.tips('请选择分类', '#category2', {
+												tips: [2,'#f00']
+											});
+											$("html, body").animate({scrollTop: $("#category2").offset().top-150},0);
                                             return false;
                                         }
 
                                         data.education_number2 = $.trim($('#education_number2').val());
                                         if(data.education_number2 === ''){
-                                            $('#education_number2').focus();
+                                            layer.tips('请输入学历证书编号', '#education_number2', {
+												tips: [2,'#f00']
+											});
+											$("#education_number2").focus();
                                             return false;
                                         }
 
                                         data.education_major2 = $.trim($('#education_major2').val());
                                         if(data.education_major2 === ''){
-                                            $('#education_major2').focus();
+                                            layer.tips('请输入专业', '#education_major2', {
+												tips: [2,'#f00']
+											});
+											$("#education_major2").focus();
                                             return false;
                                         }
                                         data.major_category2 = $.trim($('#major_category2').text());
-                                        if(data.major_category2 === ''){
-                                            $('#major_category2').focus();
-                                            return false;
+                                        if(data.major_category2 === '请选择专业类别'){
+											data.major_category2 = '';
+                                        //    layer.tips('请选择专业类别', '#major_category2', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("html, body").animate({scrollTop: $("#major_category2").offset().top-150},0);
+                                        //    return false;
                                         }
                                         data.professional_ranking2 = $.trim($('#professional_ranking2').val());
-                                        if(data.professional_ranking2 === ''){
-                                            $('#professional_ranking2').focus();
-                                            return false;
-                                        }
+                                        //if(data.professional_ranking2 === ''){
+                                        //    layer.tips('请输入专业内排名/本专业人数', '#professional_ranking2', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("#professional_ranking2").focus();
+                                        //    return false;
+                                        //}
                                         data.educations_number2 = $.trim($('#educations_number2').val());
                                         if(data.educations_number2 === ''){
-                                            $('#educations_number2').focus();
+                                            layer.tips('请输入学位证书编号', '#educations_number2', {
+												tips: [2,'#f00']
+											});
+											$("#educations_number2").focus();
                                             return false;
                                         }
                                         data.education_start_time2 = $.trim($('#d6221').val());
                                         if(data.education_start_time2 === ''){
-                                            $('#d6221').focus();
+                                            layer.tips('请选择入学时间', '#d6221', {
+												tips: [2,'#f00']
+											});
+											$("#d6221").focus();
                                             return false;
                                         }
                                         data.education_end_time2 = $.trim($('#d6222').val());
                                         if(data.education_end_time2 === ''){
-                                            $('#d6222').focus();
+                                            layer.tips('请选择毕业时间', '#d6222', {
+												tips: [2,'#f00']
+											});
+											$("#d6222").focus();
                                             return false;
                                         }
-                                        data.education_content2 = $.trim($('#education_content2').text());
-                                        if(data.education_content2 === ''){
-                                            $('#education_content2').focus();
-                                            return false;
-                                        }
+                                        data.education_content2 = $.trim($('#education_content2').val());
+                                        //if(data.education_content2 === ''){
+                                        //    layer.tips('请输入备注', '#education_content2', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("#education_content2").focus();
+                                        //    return false;
+                                        //}
                                         data.education3 = $.trim($('#education3').text());
-                                        if(data.education3 === ''){
-                                            $('#education3').focus();
-                                            return false;
+                                        if(data.education3 === '请选择其他学历'){
+                                            data.education3 = '';
+											//layer.tips('请选择其他学历', '#education3', {
+											//	tips: [2,'#f00']
+											//});
+											//$("html, body").animate({scrollTop: $("#education3").offset().top-150},0);
+                                            //return false;
                                         }
-                                        console.log(data);
                                         data.academy3 = $.trim($('#academy3').val());
-                                        if(data.academy3 === ''){
-                                            $('#academy3').focus();
-                                            return false;
-                                        }
+                                        //if(data.academy3 === ''){
+                                        //    layer.tips('请输入毕业院校', '#academy3', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("#academy3").focus();
+                                        //    return false;
+                                        //}
                                         data.university_style3 = $.trim($('#university_style3').text());
-                                        if(data.university_style3 === ''){
-                                            $('#university_style3').focus();
-                                            return false;
+                                        if(data.university_style3 === '请选择学习方式'){
+											data.university_style3 = '';
+                                        //    layer.tips('请选择学习方式', '#university_style3', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("html, body").animate({scrollTop: $("#university_style3").offset().top-150},0);
+                                        //    return false;
                                         }
                                         data.university_degree3 = $.trim($('#university_degree3').text());
-                                        if(data.university_degree3 === ''){
-                                            $('#university_degree3').focus();
-                                            return false;
+                                        if(data.university_degree3 === '请选择学历'){
+                                            data.university_degree3 = '';
+											//layer.tips('请选择学历', '#university_degree3', {
+											//	tips: [2,'#f00']
+											//});
+											//$("html, body").animate({scrollTop: $("#university_degree3").offset().top-150},0);
+                                            //return false;
                                         }
                                         data.university_category3 = $.trim($(":radio[name^='university_category3']:checked").val());
-                                        if(data.university_category3 === ''){
-                                            $(":radio[name^='university_category3']").focus();
-                                            return false;
-                                        }
+                                        //if(data.university_category3 === ''){
+										//	layer.msg('请选择最高学历毕业院校分类', {icon:2});
+										//	$("html, body").animate({scrollTop: $(":radio[name^='university_category3']").offset().top-150},0);
+                                        //    return false;
+                                        //}
                                         data.education_number3 = $.trim($('#education_number3').val());
-                                        if(data.education_number3 === ''){
-                                            $('#education_number3').focus();
-                                            return false;
-                                        }
+                                        //if(data.education_number3 === ''){
+                                        //    layer.tips('请输入学历证书编号', '#education_number3', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("#education_number3").focus();
+                                        //   return false;
+                                        //}
                                         data.education_major3 = $.trim($('#education_major3').val());
-                                        if(data.education_major3 === ''){
-                                            $('#education_major3').focus();
-                                            return false;
-                                        }
+                                        //if(data.education_major3 === ''){
+                                        //    layer.tips('请输入专业', '#education_major3', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("#education_major3").focus();
+                                        //    return false;
+                                        //}
                                         data.major_category3 = $.trim($('#major_category3').text());
-                                        if(data.major_category3 === ''){
-                                            $('#major_category3').focus();
-                                            return false;
+                                        if(data.major_category3 === '请选择专业类别'){
+											data.major_category3 = '';
+                                        //    layer.tips('请选择专业类别', '#major_category3', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("html, body").animate({scrollTop: $("#major_category3").offset().top-150},0);
+                                        //    return false;
                                         }
                                         data.professional_ranking3 = $.trim($('#professional_ranking3').val());
-                                        if(data.professional_ranking3 === ''){
-                                            $('#professional_ranking3').focus();
-                                            return false;
-                                        }
+                                        //if(data.professional_ranking3 === ''){
+                                        //   layer.tips('请输入专业内排名/本专业人数', '#professional_ranking3', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("#professional_ranking3").focus();
+                                        //    return false;
+                                        //}
                                         data.educations_number3 = $.trim($('#educations_number3').val());
-                                        if(data.educations_number3 === ''){
-                                            $('#educations_number3').focus();
-                                            return false;
-                                        }
+                                        //if(data.educations_number3 === ''){
+                                        //    layer.tips('请输入学历证书编号', '#educations_number3', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("#educations_number3").focus();
+                                        //    return false;
+                                        //}
                                         data.education_start_time3 = $.trim($('#d7221').val());
-                                        if(data.education_start_time3 === ''){
-                                            $('#d7221').focus();
-                                            return false;
-                                        }
+                                        // if(data.education_start_time3 === ''){
+                                            // layer.tips('请选择入学时间', '#d7221', {
+												// tips: [2,'#f00']
+											// });
+											// $("#d7221").focus();
+                                            // return false;
+                                        // }
                                         data.education_end_time3 = $.trim($('#d7222').val());
-                                        if(data.education_end_time3 === ''){
-                                            $('#d7222').focus();
-                                            return false;
-                                        }
-                                        data.education_content3 = $.trim($('#education_content3').text());
-                                        if(data.education_content3 === ''){
-                                            $('#education_content3').focus();
-                                            return false;
-                                        }
+                                        // if(data.education_end_time3 === ''){
+                                            // layer.tips('请选择毕业时间', '#d7222', {
+												// tips: [2,'#f00']
+											// });
+											// $("#d7222").focus();
+                                            // return false;
+                                        // }
+                                        data.education_content3 = $.trim($('#education_content3').val());
+                                        //if(data.education_content3 === ''){
+                                        //    layer.tips('请输入备注', '#education_content3', {
+										//		tips: [2,'#f00']
+										//	});
+										//	$("#education_content3").focus();
+                                        //    return false;
+                                        //}
 
                                         data.step = 2;
                                         //let index = layer.msg('正在保存，请稍候',{icon: 16,time:false});
@@ -1306,14 +1212,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>全职工作经验（年）:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="fulltime_work_life" id="fulltime_work_life" class="input-body" value="<?=$signup->fulltime_work_life?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="fulltime_work_life" placeholder="请输入全职工作经验" id="fulltime_work_life" class="input-body" value="<?=$signup->fulltime_work_life?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->fulltime_work_life?>
                                     <?php }?>
@@ -1323,14 +1223,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box" style="margin-bottom: 54px">
                                     <p class="input-title"><span class="required">*</span>管理岗位工作经验（年）:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="management_work_life" id="management_work_life" class="input-body" value="<?=$signup->management_work_life?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="management_work_life" placeholder="请输入管理岗位工作经验" id="management_work_life" class="input-body" value="<?=$signup->management_work_life?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->management_work_life?>
                                     <?php }?>
@@ -1341,14 +1235,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>单位/公司中文全称:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="chinese_company_name" id="chinese_company_name" class="input-body" value="<?=$signup->chinese_company_name?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="chinese_company_name" placeholder="请输入单位/公司中文全称" id="chinese_company_name" class="input-body" value="<?=$signup->chinese_company_name?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->chinese_company_name?>
                                     <?php }?>
@@ -1357,16 +1245,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box" style="margin-bottom: 54px;">
-                                    <p class="input-title"><span class="required">*</span>单位/公司英文全称:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>单位/公司英文全称:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="english_company_name" id="english_company_name" class="input-body" value="<?=$signup->english_company_name?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="english_company_name" placeholder="请输入单位/公司英文全称" id="english_company_name" class="input-body" value="<?=$signup->english_company_name?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->english_company_name?>
                                     <?php }?>
@@ -1375,22 +1257,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>公司年营业额:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>公司年营业额:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <div class="input-body section">
-                                            <div class="section-content" id="turnover_year"><?php if($signup->turnover_year != ''){echo $signup->turnover_year;}else{echo '请选择';}?></div>
-                                            <ul class="down-box">
-                                                <li class="option">高中</li>
-                                                <li class="option">qqq</li>
-                                            </ul>
-                                        </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="turnover_year" placeholder="请输入公司年营业额" id="turnover_year" class="input-body" value="<?=$signup->turnover_year?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->turnover_year?>
                                     <?php }?>
@@ -1400,16 +1270,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box" style="margin-bottom: 54px;">
-                                    <p class="input-title"><span class="required">*</span>单位/公司规模（人）:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>单位/公司规模（人）:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="company_size" id="company_size" class="input-body" value="<?=$signup->company_size?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="company_size" placeholder="请输入单位/公司规模" id="company_size" class="input-body" value="<?=$signup->company_size?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->company_size?>
                                     <?php }?>
@@ -1420,14 +1284,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>主营业务:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="main_business" id="main_business" class="input-body" value="<?=$signup->main_business?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="main_business" placeholder="请输入主营业务" id="main_business" class="input-body" value="<?=$signup->main_business?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->main_business?>
                                     <?php }?>
@@ -1455,13 +1313,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">其他</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        
                                     <?php }else{?>
                                         <?=$signup->Industry_category?>
                                     <?php }?>
@@ -1483,13 +1335,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">其他</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        
                                     <?php }else{?>
                                         <?=$signup->company_nature?>
                                     <?php }?>
@@ -1515,13 +1361,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">其他</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        
                                     <?php }else{?>
                                         <?=$signup->post_type?>
                                     <?php }?>
@@ -1533,14 +1373,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>工作部门:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="work_department" id="work_department" class="input-body" value="<?=$signup->work_department?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="work_department" placeholder="请输入工作部门" id="work_department" class="input-body" value="<?=$signup->work_department?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->work_department?>
                                     <?php }?>
@@ -1551,14 +1385,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box" style="margin-bottom: 54px;">
                                     <p class="input-title"><span class="required">*</span>工作职位:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="work_position" id="work_position" class="input-body" value="<?=$signup->work_position?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="work_position" placeholder="请输入工作职位" id="work_position" class="input-body" value="<?=$signup->work_position?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->work_position?>
                                     <?php }?>
@@ -1586,13 +1414,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">其他</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        
                                     <?php }else{?>
                                         <?=$signup->work_function1?>
                                     <?php }?>
@@ -1621,13 +1443,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                                 <li class="option">其他</li>
                                             </ul>
                                         </div>
-                                        <div class="condition-note-icon section">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        
                                     <?php }else{?>
                                         <?=$signup->work_function2?>
                                     <?php }?>
@@ -1636,16 +1452,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box" style="margin-bottom: 54px;">
-                                    <p class="input-title"><span class="required">*</span>负责预算规模（万元）:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>负责预算规模（万元）:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="scale_responsible" id="scale_responsible" class="input-body" value="<?=$signup->scale_responsible?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="scale_responsible" placeholder="请输入负责预算规模" id="scale_responsible" class="input-body" value="<?=$signup->scale_responsible?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->scale_responsible?>
                                     <?php }?>
@@ -1655,14 +1465,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>本单位工作开始时间:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="work_starttime" id="work_starttime" class="input-body" value="<?=$signup->work_starttime?>" onclick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="work_starttime" placeholder="请选择本单位工作开始时间" id="work_starttime" class="input-body" value="<?=$signup->work_starttime?>" onfocus="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->work_starttime?>
                                     <?php }?>
@@ -1671,16 +1475,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box">
-                                    <p class="input-title"><span class="required">*</span>目前年收入（万元）:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>目前年收入（万元）:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="annual_income" id="annual_income" class="input-body" value="<?=$signup->annual_income?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="annual_income" placeholder="请输入目前年收入" id="annual_income" class="input-body" value="<?=$signup->annual_income?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->annual_income?>
                                     <?php }?>
@@ -1689,16 +1487,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box" style="margin-bottom: 54px;">
-                                    <p class="input-title"><span class="required">*</span>起始年收入（万元）:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>起始年收入（万元）:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="annual_income_start" id="annual_income_start" class="input-body" value="<?=$signup->annual_income_start?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="annual_income_start" placeholder="请输入起始年收入" id="annual_income_start" class="input-body" value="<?=$signup->annual_income_start?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->annual_income_start?>
                                     <?php }?>
@@ -1707,16 +1499,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </div>
                             <div class="input-content">
                                 <div class="input-box" style="margin-bottom: 40px;">
-                                    <p class="input-title"><span class="required">*</span>负责管理下属员工人数（人）:&nbsp;</p>
+                                    <p class="input-title"><span class="required"></span>负责管理下属员工人数（人）:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="management_number" id="management_number" class="input-body" value="<?=$signup->management_number?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="management_number" placeholder="请输入负责管理下属员工人数" id="management_number" class="input-body" value="<?=$signup->management_number?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->management_number?>
                                     <?php }?>
@@ -1727,17 +1513,11 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             <div class="input-content">
                                 <div class="input-box">
                                     <div class="input-title" style="text-align: left;width: 489px;">
-                                        <span class="required" style="vertical-align: top;">*</span>
+                                        <span class="required" style="vertical-align: top;"></span>
                                         <div style="display: inline-block;width: 440px;">
                                             本单位内岗位情况(包括曾经做过的各岗位名称、职位、工作职责、工作业绩、汇报关系、下属人数等信息)
                                         </div>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        
                                     </div>
                                     <?php if($write_step <= $step){?>
                                         <div contenteditable="true" id="position_situation" style="width: 489px;padding:8px;height: 181px;border:1px solid rgba(216,216,216,1);background: #fff;"><?=$signup->position_situation?></div>
@@ -1750,14 +1530,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>上级姓名:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="superior_name" id="superior_name" class="input-body" value="<?=$signup->superior_name?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="superior_name" placeholder="请输入上级姓名" id="superior_name" class="input-body" value="<?=$signup->superior_name?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->superior_name?>
                                     <?php }?>
@@ -1768,14 +1542,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>职位:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="superior_post" id="superior_post" class="input-body" value="<?=$signup->superior_post?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="superior_post" placeholder="请输入职位" id="superior_post" class="input-body" value="<?=$signup->superior_post?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->superior_post?>
                                     <?php }?>
@@ -1787,14 +1555,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 <div class="input-box">
                                     <p class="input-title"><span class="required">*</span>联系电话:&nbsp;</p>
                                     <?php if($write_step <= $step){?>
-                                        <input type="text" name="superior_phone" id="superior_phone" class="input-body" value="<?=$signup->superior_phone?>"/>
-                                        <div class="condition-note-icon">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        <input type="text" name="superior_phone" placeholder="请输入联系电话" id="superior_phone" class="input-body" value="<?=$signup->superior_phone?>"/>
+                                        
                                     <?php }else{?>
                                         <?=$signup->superior_phone?>
                                     <?php }?>
@@ -1817,17 +1579,11 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             <div class="input-content">
                                 <div class="input-box" style="margin-bottom: 75px;">
                                     <div class="input-title" style="text-align: left;width: 489px;">
-                                        <span class="required" style="vertical-align: top;">*</span>
+                                        <span class="required" style="vertical-align: top;"></span>
                                         <div style="display: inline-block;width: 440px;">
                                             其他工作经历(从最近的开始填写，包括单位、工作时间、职位、汇报关系、下属员工人数、工作职责业绩、收入和离职原因等信息)
                                         </div>
-                                        <div class="condition-note-icon" style="top:-30px;">
-                                            <img src="./static/images/condition-prompt.png" alt="">
-                                            <!-- <div class="condition-note-triangle"></div>
-                                            <div class="condition-note-content">
-                                              提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                            </div> -->
-                                        </div>
+                                        
                                     </div>
                                     <?php if($write_step <= $step){?>
                                         <div contenteditable="true" id="other_work_experience" style="width: 489px;padding:8px;height: 181px;border:1px solid rgba(216,216,216,1);background: #fff;"><?=$signup->other_work_experience?></div>
@@ -1861,125 +1617,197 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                         data.academy_id = $("#academy").val();
                                         data.fulltime_work_life = $.trim($('#fulltime_work_life').val());
                                         if(data.fulltime_work_life === ''){
-                                            $('#fulltime_work_life').focus();
+                                            layer.tips('请输入全职工作经验', '#fulltime_work_life', {
+												tips: [2,'#f00']
+											});
+											$("#fulltime_work_life").focus();
                                             return false;
                                         }
                                         data.management_work_life = $.trim($('#management_work_life').val());
                                         if(data.management_work_life === ''){
-                                            $('#management_work_life').focus();
+                                            layer.tips('请输入管理岗位工作经验', '#management_work_life', {
+												tips: [2,'#f00']
+											});
+											$("#management_work_life").focus();
                                             return false;
                                         }
                                         data.chinese_company_name = $.trim($('#chinese_company_name').val());
                                         if(data.chinese_company_name === ''){
-                                            $('#chinese_company_name').focus();
+                                            layer.tips('请输入单位/公司中文全称', '#chinese_company_name', {
+												tips: [2,'#f00']
+											});
+											$("#chinese_company_name").focus();
                                             return false;
                                         }
                                         data.english_company_name = $.trim($('#english_company_name').val());
-                                        if(data.english_company_name === ''){
-                                            $('#english_company_name').focus();
-                                            return false;
-                                        }
-                                        data.turnover_year = $.trim($('#turnover_year').text());
-                                        if(data.turnover_year === ''){
-                                            $('#turnover_year').focus();
-                                            return false;
-                                        }
+                                        // if(data.english_company_name === ''){
+                                            // layer.tips('请输入单位/公司英文全称', '#english_company_name', {
+												// tips: [2,'#f00']
+											// });
+											// $("#english_company_name").focus();
+                                            // return false;
+                                        // }
+                                        data.turnover_year = $.trim($('#turnover_year').val());
+                                        // if(data.turnover_year === ''){
+                                            // layer.tips('请输入公司年营业额', '#turnover_year', {
+												// tips: [2,'#f00']
+											// });
+											// $("#turnover_year").focus();
+                                            // return false;
+                                        // }
                                         data.company_size = $.trim($('#company_size').val());
-                                        if(data.company_size === ''){
-                                            $('#company_size').focus();
-                                            return false;
-                                        }
+                                        // if(data.company_size === ''){
+                                            // layer.tips('请输入单位/公司规模', '#company_size', {
+												// tips: [2,'#f00']
+											// });
+											// $("#company_size").focus();
+                                            // return false;
+                                        // }
                                         data.main_business = $.trim($('#main_business').val());
                                         if(data.main_business === ''){
-                                            $('#main_business').focus();
+                                            layer.tips('请输入主营业务', '#main_business', {
+												tips: [2,'#f00']
+											});
+											$("#main_business").focus();
                                             return false;
                                         }
                                         data.Industry_category = $.trim($('#Industry_category').text());
-                                        if(data.Industry_category === ''){
-                                            $('#Industry_category').focus();
+                                        if(data.Industry_category === '请选择行业类别'){
+                                            layer.tips('请选择行业类别', '#Industry_category', {
+												tips: [2,'#f00']
+											});
+											$("html, body").animate({scrollTop: $("#Industry_category").offset().top-150},0);
                                             return false;
                                         }
                                         data.company_nature = $.trim($('#company_nature').text());
-                                        if(data.company_nature === ''){
-                                            $('#company_nature').focus();
+                                        if(data.company_nature === '请选择公司性质'){
+                                            layer.tips('请选择公司性质', '#company_nature', {
+												tips: [2,'#f00']
+											});
+											$("html, body").animate({scrollTop: $("#company_nature").offset().top-150},0);
                                             return false;
                                         }
                                         data.post_type = $.trim($('#post_type').text());
-                                        if(data.post_type === ''){
-                                            $('#post_type').focus();
+                                        if(data.post_type === '请选择岗位类型'){
+                                            layer.tips('请选择岗位类型', '#post_type', {
+												tips: [2,'#f00']
+											});
+											$("html, body").animate({scrollTop: $("#post_type").offset().top-150},0);
                                             return false;
                                         }
                                         data.work_department = $.trim($('#work_department').val());
                                         if(data.work_department === ''){
-                                            $('#work_department').focus();
+                                            layer.tips('请输入工作部门', '#work_department', {
+												tips: [2,'#f00']
+											});
+											$("#work_department").focus();
                                             return false;
                                         }
                                         data.work_position = $.trim($('#work_position').val());
                                         if(data.work_position === ''){
-                                            $('#work_position').focus();
+                                            layer.tips('请输入工作职位', '#work_position', {
+												tips: [2,'#f00']
+											});
+											$("#work_position").focus();
                                             return false;
                                         }
                                         data.work_function1 = $.trim($('#work_function1').text());
-                                        if(data.work_function1 === ''){
-                                            $('#work_function1').focus();
+                                        if(data.work_function1 === '请选择岗位职能'){
+                                            layer.tips('请选择岗位职能', '#work_function1', {
+												tips: [2,'#f00']
+											});
+											$("html, body").animate({scrollTop: $('#work_function1').offset().top-150},0);
                                             return false;
                                         }
                                         data.work_function2 = $.trim($('#work_function2').text());
-                                        if(data.work_function2 === ''){
-                                            $('#work_function2').focus();
+                                        if(data.work_function2 === '请选择岗位职能'){
+                                            layer.tips('请选择岗位职能', '#work_function2', {
+												tips: [2,'#f00']
+											});
+											$("html, body").animate({scrollTop: $('#work_function2').offset().top-150},0);
                                             return false;
                                         }
                                         data.scale_responsible = $.trim($('#scale_responsible').val());
-                                        if(data.scale_responsible === ''){
-                                            $('#scale_responsible').focus();
-                                            return false;
-                                        }
+                                        // if(data.scale_responsible === ''){
+                                            // layer.tips('请输入负责预算规模', '#scale_responsible', {
+												// tips: [2,'#f00']
+											// });
+											// $("#scale_responsible").focus();
+                                            // return false;
+                                        // }
                                         data.work_starttime = $.trim($('#work_starttime').val());
                                         if(data.work_starttime === ''){
-                                            $('#work_starttime').focus();
+                                            layer.tips('请选择本单位工作开始时间', '#work_starttime', {
+												tips: [2,'#f00']
+											});
+											$("#work_starttime").focus();
                                             return false;
                                         }
                                         data.annual_income = $.trim($('#annual_income').val());
-                                        if(data.annual_income === ''){
-                                            $('#annual_income').focus();
-                                            return false;
-                                        }
+                                        // if(data.annual_income === ''){
+                                            // layer.tips('请输入目前年收入', '#annual_income', {
+												// tips: [2,'#f00']
+											// });
+											// $("#annual_income").focus();
+                                            // return false;
+                                        // }
                                         data.annual_income_start = $.trim($('#annual_income_start').val());
-                                        if(data.annual_income_start === ''){
-                                            $('#annual_income_start').focus();
-                                            return false;
-                                        }
+                                        // if(data.annual_income_start === ''){
+                                            // layer.tips('请输入起始年收入', '#annual_income_start', {
+												// tips: [2,'#f00']
+											// });
+											// $("#annual_income_start").focus();
+                                            // return false;
+                                        // }
                                         data.management_number = $.trim($('#management_number').val());
-                                        if(data.management_number === ''){
-                                            $('#management_number').focus();
-                                            return false;
-                                        }
+                                        // if(data.management_number === ''){
+                                            // layer.tips('请输入负责管理下属员工人数', '#management_number', {
+												// tips: [2,'#f00']
+											// });
+											// $("#management_number").focus();
+                                            // return false;
+                                        // }
                                         data.position_situation = $.trim($('#position_situation').text());
-                                        if(data.position_situation === ''){
-                                            $('#position_situation').focus();
-                                            return false;
-                                        }
+                                        // if(data.position_situation === ''){
+                                            // layer.tips('请输入本单位内岗位情况', '#position_situation', {
+												// tips: [2,'#f00']
+											// });
+											// $("#position_situation").focus();
+                                            // return false;
+                                        // }
                                         data.superior_name = $.trim($('#superior_name').val());
                                         if(data.superior_name === ''){
-                                            $('#superior_name').focus();
+                                            layer.tips('请输入上级姓名', '#superior_name', {
+												tips: [2,'#f00']
+											});
+											$("#superior_name").focus();
                                             return false;
                                         }
                                         data.superior_post = $.trim($('#superior_post').val());
                                         if(data.superior_post === ''){
-                                            $('#superior_post').focus();
+                                            layer.tips('请输入职位', '#superior_post', {
+												tips: [2,'#f00']
+											});
+											$("#superior_post").focus();
                                             return false;
                                         }
                                         data.superior_phone = $.trim($('#superior_phone').val());
-                                        if(data.superior_phone === ''){
-                                            $('#superior_phone').focus();
+                                        if(data.superior_phone === '' || !PhoneValid(data.superior_phone)){
+                                            layer.tips('请输入正确的联系电话', '#superior_phone', {
+												tips: [2,'#f00']
+											});
+											$("#superior_phone").focus();
                                             return false;
                                         }
                                         data.agree_contact_suoerior = $.trim($(":radio[name^='agree_contact_suoerior']:checked").val());
                                         data.other_work_experience = $.trim($('#other_work_experience').text());
-                                        if(data.other_work_experience === ''){
-                                            $('#other_work_experience').focus();
-                                            return false;
-                                        }
+                                        // if(data.other_work_experience === ''){
+                                            // layer.tips('请输入其他工作经历', '#other_work_experience', {
+												// tips: [2,'#f00']
+											// });
+											// $("#other_work_experience").focus();
+                                            // return false;
+                                        // }
 
                                         data.step = 3;
                                         //let index = layer.msg('正在保存，请稍候',{icon: 16,time:false});
@@ -2017,14 +1845,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                                 <div class="item-upload-btn">
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('card_front',this,4001,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
-                                        <div class="icon-question-mark" title="身份证（正面）">?</div>
-                                        <div class="question-popup">
-                                            请上传身份证（正面）
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="card_front_btn" onclick = "upload('card_front',this,4001,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
                                     <?php }?>
                                 </div>
                             </div>
@@ -2040,14 +1861,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                                 <div class="item-upload-btn">
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('card_back',this,4002,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
-                                        <div class="icon-question-mark" title="身份证（反面）">?</div>
-                                        <div class="question-popup">
-                                            请上传身份证（反面）
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="card_back_btn" onclick = "upload('card_back',this,4002,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
+                                        
                                     <?php }?>
                                 </div>
                             </div>
@@ -2063,21 +1878,14 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                     <input type="hidden" name="diploma_scan" id="diploma_scan" value="<?=$signup->diploma_scan?>"/>
                                 </div>
                                 <div class="item-upload-btn">
-                                    <span>点击上传</span>
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('diploma_scan',this,4003,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
-                                        <div class="icon-question-mark" title="本科毕业证扫描件">?</div>
-                                        <div class="question-popup">
-                                            请上传本科毕业证扫描件
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="diploma_scan_btn" onclick = "upload('diploma_scan',this,4003,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
+                                        
                                     <?php }?>
                                 </div>
                             </div>
                             <div class="item-upload">
-                                <div class="item-upload-title">研究生毕业证扫描件</div>
+                                <div class="item-upload-title"><span class="icon-must">*</span>研究生毕业证扫描件</div>
                                 <div class="item-upload-img">
                                     <a href="javascript:void(0);" onclick = "preview('postgraduate_diploma_scan','研究生毕业证扫描件')">
                                         <img src="<?php if($signup->postgraduate_diploma_scan != ''){echo $signup->postgraduate_diploma_scan;}else{echo 'static/images/icon-file.png';}?>" alt="本科毕业证扫描件" id="img_postgraduate_diploma_scan">
@@ -2086,14 +1894,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                                 <div class="item-upload-btn">
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('postgraduate_diploma_scan',this,4005,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
-                                        <div class="icon-question-mark" title="研究生毕业证扫描件">?</div>
-                                        <div class="question-popup">
-                                            请上传研究生毕业证扫描件
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="postgraduate_diploma_scan_btn" onclick = "upload('postgraduate_diploma_scan',this,4005,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
+                                        
                                     <?php }?>
                                 </div>
                             </div>
@@ -2111,20 +1913,14 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                                 <div class="item-upload-btn">
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('report_card',this,4007,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
-                                        <div class="icon-question-mark" title="本科阶段成绩单">?</div>
-                                        <div class="question-popup">
-                                            请上传本科阶段成绩单
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="report_card_btn" onclick = "upload('report_card',this,4007,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
+                                        
                                     <?php }?>
                                 </div>
                             </div>
                             <div class="item-upload">
                                 <div class="item-upload-title">
-                                    <span class="icon-must">*</span> 研究生毕业证扫描件<br>（需学校教务处盖章）
+                                    <span class="icon-must">*</span> 研究生阶段成绩单<br>（需学校教务处盖章）
                                 </div>
                                 <div class="item-upload-img">
                                     <a href="javascript:void(0);" onclick = "preview('postgraduate_report_card','研究生阶段成绩单')">
@@ -2134,14 +1930,8 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                                 <div class="item-upload-btn">
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('postgraduate_report_card',this,4008,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
-                                        <div class="icon-question-mark" title="研究生毕业证扫描件">?</div>
-                                        <div class="question-popup">
-                                            请上传研究生毕业证扫描件
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="postgraduate_report_card_btn" onclick = "upload('postgraduate_report_card',this,4008,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
+                                        
                                     <?php }?>
                                 </div>
                             </div>
@@ -2157,20 +1947,14 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                                 <div class="item-upload-btn">
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('resume_chinese',this,4009,'<?=Url::toRoute(['api/upload','type'=>'file'],$this->context::$domain)?>','file')">点击上传</a>
-                                        <div class="icon-question-mark" title="个人简历（中文）">?</div>
-                                        <div class="question-popup">
-                                            请上传个人简历（中文）
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="resume_chinese_btn" onclick = "upload('resume_chinese',this,4009,'<?=Url::toRoute(['api/upload','type'=>'file'],$this->context::$domain)?>','file')">点击上传</a>
+                                        
                                     <?php }?>
                                 </div>
                             </div>
                             <div class="item-upload">
                                 <div class="item-upload-title">
-                                    个人简历（英文）
+                                    <span class="icon-must">*</span>个人简历（英文）
                                 </div>
                                 <div class="item-upload-img">
                                     <a href="javascript:void(0);" onclick = "alowload('resume_english','个人简历（英文）')">
@@ -2180,21 +1964,15 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                                 <div class="item-upload-btn">
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('resume_english',this,4011,'<?=Url::toRoute(['api/upload','type'=>'file'],$this->context::$domain)?>','file')">点击上传</a>
-                                        <div class="icon-question-mark" title="个人简历（英文）">?</div>
-                                        <div class="question-popup">
-                                            请上传个人简历（英文）
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="resume_english_btn" onclick = "upload('resume_english',this,4011,'<?=Url::toRoute(['api/upload','type'=>'file'],$this->context::$domain)?>','file')">点击上传</a>
+                                        
                                     <?php }?>
                                 </div>
                             </div>
                             <div class="clear"></div>
 
                             <div class="item-upload">
-                                <div class="item-upload-title"><span class="icon-must">*</span>所在单位组织结构图</div>
+                                <div class="item-upload-title"><span class="icon-must"></span>所在单位组织结构图</div>
                                 <div class="item-upload-img">
                                     <a href="javascript:void(0);" onclick = "preview('company_organization_chart','所在单位组织结构图')">
                                         <img src="<?php if($signup->company_organization_chart != ''){echo $signup->company_organization_chart;}else{echo 'static/images/icon-structure.png';}?>" alt="所在单位组织结构图" id="img_company_organization_chart">
@@ -2203,20 +1981,14 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                                 <div class="item-upload-btn">
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('company_organization_chart',this,4010,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
-                                        <div class="icon-question-mark" title="所在单位组织结构图">?</div>
-                                        <div class="question-popup">
-                                            请上传所在单位组织结构图
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="company_organization_chart_btn" onclick = "upload('company_organization_chart',this,4010,'<?=Url::toRoute(['api/upload'],$this->context::$domain)?>')">点击上传</a>
+                                        
                                     <?php }?>
                                 </div>
                             </div>
                             <div class="item-upload">
                                 <div class="item-upload-title">
-                                    英文申请短文
+                                    <span class="icon-must">*</span>英文申请短文
                                 </div>
                                 <div class="item-upload-img">
                                     <a href="javascript:void(0);" onclick = "alowload('english_essays','英文申请短文')">
@@ -2226,20 +1998,14 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                                 <div class="item-upload-btn">
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('english_essays',this,4012,'<?=Url::toRoute(['api/upload','type'=>'file'],$this->context::$domain)?>','file')">点击上传</a>
-                                        <div class="icon-question-mark" title="英文申请短文">?</div>
-                                        <div class="question-popup">
-                                            请上传英文申请短文
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="english_essays_btn" onclick = "upload('english_essays',this,4012,'<?=Url::toRoute(['api/upload','type'=>'file'],$this->context::$domain)?>','file')">点击上传</a>
+                                        
                                     <?php }?>
                                 </div>
                             </div>
                             <div class="clear"></div>
                             <div class="item-upload" style="margin-right:300px;">
-                                <div class="item-upload-title">个人附加材料</div>
+                                <div class="item-upload-title"><span class="icon-must">*</span>个人附加材料</div>
                                 <div class="item-upload-img">
                                     <a href="javascript:void(0);" onclick = "alowload('additional_material','个人附加材料')">
                                         <img src="<?php echo 'static/images/icon-appendix.png';?>" alt="个人附加材料">
@@ -2248,20 +2014,12 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                 </div>
                                 <div class="item-upload-btn">
                                     <?php if($write_step <= $step){?>
-                                        <a href="javascript:void(0);" onclick = "upload('additional_material',this,4013,'<?=Url::toRoute(['api/upload','type'=>'file'],$this->context::$domain)?>','file')">点击上传</a>
-                                        <div class="icon-question-mark" title="个人附加材料">?</div>
-                                        <div class="question-popup">
-                                            请上传个人附加材料
-                                            <s class="triangle">
-                                                <s class="triangle inner-triangle"></s>
-                                            </s>
-                                        </div>
+                                        <a href="javascript:void(0);" id="additional_material_btn" onclick = "upload('additional_material',this,4013,'<?=Url::toRoute(['api/upload','type'=>'file'],$this->context::$domain)?>','file')">点击上传</a>
+                                        
                                     <?php }?>
                                 </div>
                             </div>
                             <div class="clear"></div>
-
-
                             <?php if($write_step <= $step){?>
                                 <div class="condition-person-branch8">
                                     <div class="condition-person-btn1" id="save">保存</div>
@@ -2286,57 +2044,90 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                         data.academy_id = $("#academy").val();
                                         data.card_front = $("#card_front").val();
                                         if(!data.card_front){
-                                            layer.msg('请上传身份证（正面）',{icon:2});
+											layer.tips('请上传身份证（正面）', '#card_front_btn', {
+												tips: [2,'#f00']
+											});
+											$("#card_front_btn").focus();
                                             return false;
                                         }
                                         data.card_back = $("#card_back").val();
                                         if(!data.card_back){
-                                            layer.msg('请上传身份证（反面）',{icon:2});
+											layer.tips('请上传身份证（反面）', '#card_back_btn', {
+												tips: [2,'#f00']
+											});
+											$("#card_back_btn").focus();
                                             return false;
                                         }
                                         data.diploma_scan = $("#diploma_scan").val();
                                         if(!data.diploma_scan){
-                                            layer.msg('请上传本科毕业证扫描件',{icon:2});
+											layer.tips('请上传本科毕业证扫描件', '#diploma_scan_btn', {
+												tips: [2,'#f00']
+											});
+											$("#diploma_scan_btn").focus();
                                             return false;
                                         }
                                         data.postgraduate_diploma_scan = $("#postgraduate_diploma_scan").val();
                                         if(!data.postgraduate_diploma_scan){
-                                            layer.msg('请上传研究生毕业证扫描件',{icon:2});
+											layer.tips('请上传研究生毕业证扫描件', '#postgraduate_diploma_scan_btn', {
+												tips: [2,'#f00']
+											});
+											$("#postgraduate_diploma_scan_btn").focus();
                                             return false;
                                         }
                                         data.report_card = $("#report_card").val();
                                         if(!data.report_card){
-                                            layer.msg('请上传本科阶段成绩单',{icon:2});
+											layer.tips('请上传本科阶段成绩单', '#report_card_btn', {
+												tips: [2,'#f00']
+											});
+											$("#report_card_btn").focus();
                                             return false;
                                         }
                                         data.postgraduate_report_card = $("#postgraduate_report_card").val();
                                         if(!data.postgraduate_report_card){
-                                            layer.msg('请上传研究生阶段成绩单',{icon:2});
+                                            layer.tips('请上传研究生阶段成绩单', '#postgraduate_report_card_btn', {
+												tips: [2,'#f00']
+											});
+											$("#postgraduate_report_card_btn").focus();
                                             return false;
                                         }
                                         data.resume_chinese = $("#resume_chinese").val();
                                         if(!data.resume_chinese){
-                                            layer.msg('请上传个人简历（中文）',{icon:2});
-                                            return false;
-                                        }
-                                        data.company_organization_chart = $("#company_organization_chart").val();
-                                        if(!data.company_organization_chart){
-                                            layer.msg('请上传所在单位组织结构图',{icon:2});
+											layer.tips('请上传个人简历（中文）', '#resume_chinese_btn', {
+												tips: [2,'#f00']
+											});
+											$("#resume_chinese_btn").focus();
                                             return false;
                                         }
                                         data.resume_english = $("#resume_english").val();
                                         if(!data.resume_english){
-                                            layer.msg('请上传个人简历（英文）',{icon:2});
+											layer.tips('请上传个人简历（英文）', '#resume_english_btn', {
+												tips: [2,'#f00']
+											});
+											$("#resume_english_btn").focus();
                                             return false;
                                         }
+										data.company_organization_chart = $("#company_organization_chart").val();
+                                        // if(!data.company_organization_chart){
+                                            // layer.tips('请上传所在单位组织结构图', '#company_organization_chart_btn', {
+												// tips: [2,'#f00']
+											// });
+											// $("#company_organization_chart_btn").focus();
+                                            // return false;
+                                        // }
                                         data.english_essays = $("#english_essays").val();
                                         if(!data.english_essays){
-                                            layer.msg('请上传英文申请短文',{icon:2});
+											layer.tips('请上传英文申请短文', '#english_essays_btn', {
+												tips: [2,'#f00']
+											});
+											$("#english_essays_btn").focus();
                                             return false;
                                         }
                                         data.additional_material = $("#additional_material").val();
                                         if(!data.additional_material){
-                                            layer.msg('请上传个人附加材料',{icon:2});
+											layer.tips('请上传个人附加材料', '#additional_material_btn', {
+												tips: [2,'#f00']
+											});
+											$("#additional_material_btn").focus();
                                             return false;
                                         }
                                         data.step = 4;
@@ -2390,13 +2181,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                         <div class="condition-introduce">
                             <div class="condition-introduce-title">
                                 <label for="answer_1" id="question_1"><?=$signup->question_1?></label>
-                                <div class="condition-note-icon">
-                                    <img src="./static/images/condition-prompt.png" alt="">
-                                    <!-- <div class="condition-note-triangle"></div>
-                                    <div class="condition-note-content">
-                                      提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                    </div> -->
-                                </div>
+                                
                             </div>
                             <?php if($write_step <= $step){?>
                                 <textarea name="answer_1" id="answer_1" class="condition-introduce-textarea"><?=$signup->answer_1?></textarea>
@@ -2405,13 +2190,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             <?php }?>
                             <div class="condition-introduce-title">
                                 <label for="answer_2" id="question_2"><?=$signup->question_2?></label>
-                                <div class="condition-note-icon">
-                                    <img src="./static/images/condition-prompt.png" alt="">
-                                    <!-- <div class="condition-note-triangle"></div>
-                                    <div class="condition-note-content">
-                                      提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                    </div> -->
-                                </div>
+                                
                             </div>
                             <?php if($write_step <= $step){?>
                                 <textarea name="answer_2" id="answer_2" class="condition-introduce-textarea"><?=$signup->answer_2?></textarea>
@@ -2420,13 +2199,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             <?php }?>
                             <div class="condition-introduce-title">
                                 <label for="answer_3" id="question_3"><?=$signup->question_3?></label>
-                                <div class="condition-note-icon">
-                                    <img src="./static/images/condition-prompt.png" alt="">
-                                    <!-- <div class="condition-note-triangle"></div>
-                                    <div class="condition-note-content">
-                                      提示信息提示信息提 示信息提示信息提示信息提示信息提示信息
-                                    </div> -->
-                                </div>
+                                
                             </div>
                             <?php if($write_step <= $step){?>
                                 <textarea name="answer_3" id="answer_3" class="condition-introduce-textarea"><?=$signup->answer_3?></textarea>
@@ -2459,19 +2232,28 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                     data.question_1 = $("#question_1").text();
                                     data.answer_1 = $.trim($('#answer_1').val());
                                     if(data.answer_1 === ''){
-                                        layer.msg('请回答问题1',{icon:2});
+										layer.tips('请回答问题1', '#answer_1', {
+											tips: [2,'#f00']
+										});
+										$("#answer_1").focus();
                                         return false;
                                     }
                                     data.question_2 = $("#question_2").text();
                                     data.answer_2 = $.trim($('#answer_2').val());
                                     if(data.answer_2 === ''){
-                                        layer.msg('请回答问题2',{icon:2});
+										layer.tips('请回答问题2', '#answer_2', {
+											tips: [2,'#f00']
+										});
+										$("#answer_2").focus();
                                         return false;
                                     }
                                     data.question_3 = $("#question_3").text();
                                     data.answer_3 = $.trim($('#answer_3').val());
                                     if(data.answer_3 === ''){
-                                        layer.msg('请回答问题3',{icon:2});
+										layer.tips('请回答问题3', '#answer_3', {
+											tips: [2,'#f00']
+										});
+										$("#answer_3").focus();
                                         return false;
                                     }
                                     data.step = 5;
@@ -2565,7 +2347,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             </p>
                         </div>
                         <?php if($write_step <= $step){?>
-                            <div class="condition-submit-check">
+                            <div class="condition-submit-check" id="consent_box">
                                 <span>*</span>
                                 <input type="checkbox" value="1" name="consent" id="consent" class="condition-submit-checkbox">
                                 <label for="consent">我已经阅读并认可<span>（*真实性声明）</span></label>
@@ -2604,7 +2386,9 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                                             },'json');
                                         }, function(){});
                                     }else{
-                                        layer.msg('请先阅读并认可真实性声明',{icon:2});
+										layer.tips('请先阅读并认可真实性声明', '#consent_box', {
+											tips: [1,'#f00']
+										});
                                         return false;
                                     }
                                 }

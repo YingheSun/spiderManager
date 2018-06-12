@@ -216,7 +216,7 @@
 }
 
 #cooperation .switch-container {
-  /*display: none;*/
+  display: none;
 }
 
 #cooperation .switch-container.show-switch {
@@ -544,10 +544,19 @@
 }
 .apply-process-title{
   font-size: 40px;
-  
+
 }
 .apply-process-content img{
   width:718px;
+}
+.school-table1 {
+  font-size: 20px;
+  color: #777777;
+  font-weight: 700;
+}
+.school-table2 {
+  font-size: 18px;
+  color: #777777;
 }
 
 
@@ -717,7 +726,7 @@
   width: 75%;
   height: 50px;
 }
-.line{
+.modify .line{
   width:496px;
   height:3px;
   border:1px solid rgba(151,151,151,1);
@@ -788,10 +797,7 @@ img.user{
   height: 88px;
   margin:100px 68px 0 0;
 }
-.name{
-  margin-top: 18px;
-}
-.name span{
+.Personal-Info .name span{
   font-size:36px;
   color:rgba(66,78,92,1);
   line-height:50px;
@@ -882,7 +888,7 @@ img.user{
 .not-icon{
   background-image: url("../images/wait-icon.png");
 }
-.now{
+.process-con .now{
   width: 163px !important;
   height: 163px !important;
   font-size: 80px !important;
@@ -994,7 +1000,6 @@ img.user{
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
 }
 .float-message{
   width: 344px;

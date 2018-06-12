@@ -26,7 +26,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                         </a>
                         <!--<span>修改</span>-->
                     </div>
-                    <img src="<?=$member->avatar?$member->avatar:'static/images/avatar.png';?>" alt="" class="left user"/>
+                    <img src="<?=$member->avatar?$member->avatar:'static/images/modify.png';?>" class="left user"/>
                     <div class="xinxi left">
                         <div class="name">
                             <span>姓名:&nbsp;&nbsp;</span>
@@ -41,11 +41,11 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             <span><?=$member->email?></span>
                         </div>
                     </div>
-                    <img src="static/images/email.png" alt="" class="right email"/>
+                    <a href="<?=Url::toRoute(['member/email'],$this->context::$domain)?>" target="_blank"><img src="static/images/email.png" alt="" class="right email"/></a>
                     <div class="vertical right"></div>
 
                     <?php if($member->real_name=='' || $member->email==''){?>
-                        <div class="float">
+                        <div class="float" onclick="$(this).css('display','none')">
                             <div class="float-message name">
                                 <span>姓名：</span>
                                 <span class="no">未设置</span>
@@ -303,11 +303,18 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                             <?php } ?>
                         </div>
                     </div>
-
-
                 </div>
             <?php }else{ ?>
-                还没有申请
+				<div class="Personal-Info apply ">
+					<h2>我的申请</h2>
+					<p>My Application</p>
+					<div class="no-login">
+				<span class="remind">
+				  还没有申请
+				</span>
+					<a class="login" href="<?=Url::toRoute(['member/signup'],$this->context::$domain)?>">立即申请</a>
+				</div>
+				</div>
             <?php } ?>
         <?php }else{ ?>
         <!--我的申请-->

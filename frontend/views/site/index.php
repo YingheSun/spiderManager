@@ -5,7 +5,7 @@ $this->metaTags[]="<meta name='keywords' content='".Yii::$app->params['web_keywo
 $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_description']['value']."'/>";
 ?>
 
-<div class="container">
+<div class="container" style="background:#fff;">
     <div class="index-banner">
         <img src="static/images/banner.png" alt="" />
     </div>
@@ -72,6 +72,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
             </div>
         </div>
     </div>
+
+
+
+
     <div id="cooperation">
         <p class="title">院校合作</p>
         <p class="why">UNIVERSITIES</p>
@@ -97,6 +101,7 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                 <p>National University of Singapore</p>
             </div>
         </div>
+
         <div class="switch-container show-switch">
             <div class="switch-content">
                 <div class="content-video">
@@ -165,7 +170,135 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
             </div>
         </div>
 
-        <div class="teacher">
+
+        <div class="switch-container">
+            <div class="switch-content">
+                <div class="content-video">
+                    <video width="100%" height="100%" src="http://1254383113.vod2.myqcloud.com/78f333bevodgzp1254383113/7cebb8547447398155148086744/V15UBC6UU9gA.mp4" controls="controls" poster="">
+                        此视频不支持浏览器
+                    </video>
+                </div>
+                <div class="content-text">
+                    <p class="content-title"><span>关于AEU</span> <span>—— ABOUT AEU</span></p>
+                    <p class="paragraph" style="margin-bottom: 30px;"> Asia E University（Asia E University）简称AEU成立于2002年，是由ACD（Asia Cooperation Dialogue亚洲合作对话）发起组建的一所跨国合作大学，其建立旨在推动亚洲高等在线教育的发展，为全亚洲培养应用型跨境人才。 </p>
+                    <p class="paragraph"> AEU致力于向亚洲各国提供高水平的学位教育和职业培训，以满足亚洲日益增长的人力需求，并为各国学员提供的常态化跨境学习，交换，实习，就业服务。 </p>
+                </div>
+            </div>
+            <div class="company">
+                <div class="institutions">
+                    <div class="label">
+                        <span>认证机构</span>
+                        <span class="suffix">/ Certification body</span>
+                    </div>
+                    <div class="underline"></div>
+                </div>
+            </div>
+            <div class="certification">
+                <img src="static/images/certification2.png" alt="" />
+            </div>
+            <div class="project-introduction">
+                <div class="project">
+                    AEU MBA项目介绍
+                </div>
+                <div class="project-unline"></div>
+                <div>
+                    提供11门专业课程，专设服务亚洲经济的实战案例分析，为亚洲企业家和经纪人提供管理知识和
+                </div>
+                <div class="last-text">
+                    解决问题的方法和职业发展所需要的工商业管理知识，培养跨境高端管理人才，帮助亚洲企业家适应日益激烈的全球化竞争。
+                </div>
+                <div class="project">
+                    AEU MBA学习方式
+                </div>
+                <div class="project-unline"></div>
+                <div>
+                    本项目为在职MBA，线上授课，5学期，共15月，即可申请硕士学位证，课程可全部在国内完成，可参加马来西亚总部的毕业典礼。
+                </div>
+            </div>
+            <div class="company">
+                <div class="institutions">
+                    <div class="label">
+                        <span>课程方式</span>
+                        <span class="suffix">/ Course introduction</span>
+                    </div>
+                    <div class="underline"></div>
+                    <div class="more-btn">
+                        查看更多
+                    </div>
+                </div>
+            </div>
+            <div class="course">
+                <ul class="course-list">
+                    <li><img src="static/images/aeu-course1.png" alt="" /> <p class="course-title">Marketing Management</p> <p class="coures-content">本课程加强学生分析和管理市场战略和政策的理解，包括市场策略，市场管理步骤，市场和客户行为分析，电子营销等。</p></li>
+                    <li><img src="static/images/aeu-course2.png" alt="" /> <p class="course-title">Entrepreneurship and Innovation</p> <p class="coures-content">学习企业创新的价值和技能，如何实现商业计划和战略。</p></li>
+                    <li><img src="static/images/aeu-course3.png" alt="" /> <p class="course-title">Managing people in organisation</p> <p class="coures-content">从企业家角度，理解商业组织运营和管理。</p></li>
+                    <li><img src="static/images/aeu-course4.png" alt="" /> <p class="course-title">International business</p> <p class="coures-content">了解全球宏观环境对全球公司的影响，包括竞争，运 作和变化。</p></li>
+                    <li><img src="static/images/aeu-course5.png" alt="" /> <p class="course-title">Accounting and finance for manager</p> <p class="coures-content">包括财会管理和公司金融，帮助学员从财务和金融的作用和原则的角度做管理决策。</p></li>
+                    <li><img src="static/images/aeu-course6.png" alt="" /> <p class="course-title">Strategic management - asian business</p> <p class="coures-content">理解公司变化的步骤，组织文化和的变化的影响，以及系统变化过程中需要用到的工具和方式。</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="switch-container">
+            <div class="switch-content">
+                <div class="content-video">
+                    <img src="static/images/video.png" alt="" />
+                </div>
+                <div class="content-text">
+                    <p class="content-title"><span>关于NUS</span> <span>—— ABOUT NUS</span></p>
+                    <p class="paragraph" style="margin-bottom: 30px;"> 新加坡国立大学（National University of Singapore），简称国大（NUS），是新加坡首屈一指的世界级顶尖大学，为AACSB和EQUIS认证成员，亚洲大学联盟、亚太国际教育协会、国际研究型大学联盟、Universitas 21大学联盟、环太平洋大学协会成员，在工程、生命科学及生物医学、社会科学及自然科学等领域的研究享有世界盛名。 </p>
+                </div>
+            </div>
+            <div class="company">
+                <div class="institutions">
+                    <div class="label">
+                        <span>认证机构</span>
+                        <span class="suffix">/ 机构认证</span>
+                    </div>
+                    <div class="underline"></div>
+                </div>
+            </div>
+            <div class="certification">
+                <img src="static/images/certification3.png" alt="" />
+            </div>
+            <div class="project-introduction">
+                <div class="project">
+                    NUS EMBA项目介绍
+                </div>
+                <div class="project-unline"></div>
+                <div>
+                    学院拥有一流的具备国际学术影响力的师资队伍，他们凭借自身严谨而深厚的学科素养
+                </div>
+                <div class="last-text">
+                    启迪EMBA学员深入思考，帮助EMBA学员找到提高组织运营效率、 解决面临问题的策略和方法
+                </div>
+                <div class="project">
+                    UNS EMBA学习方式
+                </div>
+                <div class="project-unline"></div>
+                <div>
+                    本项目为EMBA，海外上课，设有23个学科，共两学年，即可申请硕士学位证，课程需在新加披完成，可参加新加坡毕业典礼
+                </div>
+            </div>
+            <div class="company">
+                <div class="institutions">
+                    <div class="label">
+                        <span>课程方式</span>
+                        <span class="suffix">/ Course introduction</span>
+                    </div>
+                    <div class="underline"></div>
+                </div>
+            </div>
+            <div class="course">
+                <ul class="course-list">
+                    <li class="list-xl"><img src="static/images/nus-course1.png" alt="" /> <p class="course-title">高层对话</p> <p class="coures-content">充分利用班级资源，深入典型企业调研，为企 业提供“诊断”，学员与企业的中高层管理者直接 对话，分析和讨论，促使学员将实践经验与理论学术相融合，强经营管理的通盘思考意识，提 升系统分析管理问题的能力。</p></li>
+                    <li class="list-xl"><img src="static/images/nus-course2.png" alt="" /> <p class="course-title">人生拓展</p> <p class="coures-content">“戈壁一堂课”（选修）中，EMBA学员将戈壁赛事当成“管理项目”来做，有团队有自我，有传 承有分工，将“玄奘之路”的“理想-行动-坚持”贯穿于企业管理和人生拓展。这一班级传统活动， 助力学员健康生活、积极进取，建立深厚感情，从而 成为“头脑、身体、心灵”全面健康、有社 会责任 心的企业家。</p></li>
+                    <li class="list-xl"><img src="static/images/nus-course3.png" alt="" /> <p class="course-title">游学全球</p> <p class="coures-content">采用海外游学方式，由教授带领，在有鲜明文化历史、产业特色的国家和区域，开展浸濡式全 方位学习。让学员开拓眼界，向世界一流企业学习，同时深入了解在地人文历史和风土人情。</p></li>
+                    <li class="list-xl"><img src="static/images/nus-course4.png" alt="" /> <p class="course-title">终身学习</p> <p class="coures-content">作为新加坡国立大学EMBA校友，将享有校友终生学习的福利，可在“终身学习计划”下申请EM BA课程旁听。共同经历体验式学习，在全球移动游学，参访典型与新兴产业，研习世界著名企 业成功经验，掌握商机脉动，为企业更高发展运筹帷幄，领航和掌舵。</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="index-teacher">
             <div class="teacher-introduced">
                 <div class="company">
                     <div class="institutions">
@@ -178,36 +311,47 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                 </div>
                 <div class="teacher-detail show-teacher">
                     <div class="detail-right">
-                        <img src="static/images/teacher2.png" alt="" />
+                        <img src="static/images/teacher1.png" alt="" />
                     </div>
                     <div class="detail-left">
-                        <div class="teacher-name">
-                            许焕琛
-                        </div>
                         <div class="teacher-experience">
-                            澳洲留学大百科创始人
+                            Paula Stechschulte
                         </div>
                         <div class="teacher-paper">
-                            澳大利亚纽卡斯尔大学(全球前1%) 工商管理硕士，北京邮电大学管理学学士。澳洲留学大百科（澳洲第一家留学生服务原创平台）创始人，澳大利亚著名金融公司ECNtrade培训师，澳大利亚CMAA工商管理学会成员，管理理论扎实，知识面丰富，风格幽默活泼，拥有强有力的演讲设计能力，丰富的客户培训及授课经验，深受中澳两国学员欢迎。
+                            Paula博士在医疗护理和高等教育领域有着30多年的经验。她在密歇根大学和德克萨斯大学等具有挑战性的医疗管理专业环境中拥有卓越的领导力和丰富的管理经验。近年来，Paula博士的工作转向了高等教育，并继续担任院长、副院长和健康护理项目主席等职务。目前她是南方大学在线学院的副院长。
+                        </div>
+                        <div class="teacher-paper">
+                            她在东密歇根大学取得了护理学学士学位，并成为一名注册护士，之后在中密歇根大学获得了经济学硕士学位，最后在卡佩拉大学取得了组织与管理学博士学位。Paula博士希望自己可以活到老学到老，这也正是教育带给人们的坚定的学习信仰。
                         </div>
                     </div>
                 </div>
                 <div class="teacher-detail">
                     <div class="detail-right">
-                        <img src="static/images/teacher1.png" alt="" />
+                        <img src="static/images/teacher2.png" alt="" />
                     </div>
                     <div class="detail-left">
-                        <div class="teacher-name">
-                            刘令涛
-                        </div>
+                        <!-- <div class="teacher-name">
+                        许焕琛
+                        </div>  -->
                         <div class="teacher-experience">
-                            11年教育行业经验
+                            Karin Bogue
                         </div>
                         <div class="teacher-paper">
-                            毕业于电子科技大学，获得管理学、法学等多个学位。11年教育行业经验，先后担任3家知名上市公司管理者，教育上市公司北京校区校长兼教学总监，中国科学技术大学EMBA北京中心副主任，广东工业大学职业规划顾问，亚洲教育设施设计与技术-2015秋季高峰论坛及展览（2015 ASIA EDUCATIONAL FACILITY DESIGN AND TECHNOLOGY AUTUMN SUMMIT &amp; SHOWCASE）主题发言嘉宾。知名情商口才训练专家，MBA面试辅导专家，10年MBA考试辅导经验。全国首创“考生院校匹配系统”，全国首创“4:3:2:1备考方略”，主编《2019年入学MBA面试实操手册》，主讲“MBA面试策略及实操”系列课程。
+                            Karin博士是南方大学商学院的一名助理教授。她还提供有关进口贸易合规的咨询服务。Karin在孟菲斯大学取得了会计学士学位、工商管理硕士学位以及法学博士学位。她还取得了国际商务博士学位，并在田纳西州获得了律师执照。卡琳从1998年开始担任兼职教员，从事商法和伦理学的教学工作，并为几所私立和公立大学教授国际合规课程。教学内容包括商法、国际法、全球管理和通用商务课程。<br/>
+                            Karin不仅是一名有执照的律师，还是一个拥有30多年国际贸易和合规经验的海关经纪人，并且已经取得了执照。她的丰富经验来源于与美国海关和边境保护局、一家律师事务所以及几家大型跨国公司的雇佣关系。她创建并组织了进口合规部门，跨职能的国际合规团队，制定了进口合规培训计划，并担任各种跨国公司的贸易合规顾问。她还编订了一些贸易条款、培训手册、教科书和国际贸易合规的在线课程
+                        </div>
+                    </div>
+                </div>
+                <div class="teacher-detail">
+                    <div class="detail-right">
+                        <img src="static/images/teacher3.png" alt="" />
+                    </div>
+                    <div class="detail-left">
+                        <div class="teacher-experience">
+                            Ruth Essler
                         </div>
                         <div class="teacher-paper">
-                            全球500强企业特聘培训讲师，授课及调研足迹踏遍全国26个省、自治区、直辖市，超过500场现场培训经验。培训客户涵盖中国移动、中国联通、中国电信、江西省发改委、江西省新余市政府、江西省宜春市政府、辽宁省盘锦市政府、广州外国语学校等提供一系列精品课程。培训课程通心路、谋思路、练套路，受到普遍欢迎。
+                            2002年，Essler博士在萨凡纳校区从兼职教员做起，开始了她的教学生涯。任教至今已经超过15年。多年以来她亲眼见证了南方大学的转变，并对学校的未来充满期待，她说这是她最大的荣幸。作为工商管理博士项目主管，Essler博士现在负责课程教学，并且是学位论文的负责人和学生论文委员会成员。她还负责工商管理硕士项目和人力资源管理硕士项目。2016年，Essler博士完成了在阿尔格西大学的工商管理博士学位，毕业论文名为《网络兼职教师的情商与教师的自我效能感》。
                         </div>
                     </div>
                 </div>
@@ -216,91 +360,75 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                         <img src="static/images/teacher4.png" alt="" />
                     </div>
                     <div class="detail-left">
-                        <div class="teacher-name">
-                            徐鲲
-                        </div>
+                        <!-- <div class="teacher-name">
+                        许焕琛
+                        </div>  -->
                         <div class="teacher-experience">
-                            曾任中信益佰国际商学院副总
+                            Tom Javarinis
                         </div>
                         <div class="teacher-paper">
-                            中国人民大学工商管理硕士，主讲中文面试。曾任中信益佰国际商学院副总经理，目前就职于世界500强公司，负责运营管理工作。主要承担《MBA模拟面试》《人际关系培训》《领导力提升》《运营质量体系管理》《运营推广和品牌营销》《运营战略规划与制定》《运营数据的分析与驱动》《新环境下的运营品牌战略与消费心理》等课程教学任务。主要从事运营推广与战略规划等方面的教学与科研工作；先后发表研究论文数篇；多次获得运营管理方面的个人荣誉。
-                        </div>
-                    </div>
-                </div>
-                <div class="teacher-detail">
-                    <div class="detail-right">
-                        <img src="static/images/stsl.png" alt="" />
-                    </div>
-                    <div class="detail-left">
-                        <div class="teacher-name">
-                            司徒莎莉
-                        </div>
-                        <div class="teacher-experience">
-                            中国人民大学工商管理硕士
-                        </div>
-                        <div class="teacher-paper">
-                            中共党员，中国人民大学工商管理硕士、中南财经政法大学经济学学士，MBM（人大校友企业家导师）项目大使。具有扎实的理工科、管理学和会计学背景。主讲企业创新（Entrepreneurship and Innovation）。5年特大型央企基层工作、管理经验，10余年北京企业集团高管经历。曾任北京国研斯坦福俱乐部管理有限公司办公室主任，京政济昆教育科技有限公司项目总监。在高端培训领域有着丰富的教学管理和活动策划的经验，曾多次负责企业家俱乐部、地方各级政府的培训课程设计，组织教学管理、企业家夫人沙龙以及子女夏令营等活动，并参与策划组织中央电视台“中国现代文化名人世纪寻根”的系列节目，与政府智库、研究机构和产业界保持着有效沟通。
+                            Tom博士是南方大学的一名助理教授。他在硕士阶段选择了攻读MBA，并且涉及战略管理、会计、健康护理多个方向，博士专业是组织发展和人力资源。 <br/>他取得了精益六西格玛黑带证书、供应链管理师证书以及职业经理人资格认证<br/> Tom博士在零售和食品服务分销、仓储、物流、供应链等工作岗位上拥有丰富的经验。
                         </div>
                     </div>
                 </div>
                 <div class="switch-teacher">
                     <div class="now active" data-teacher="teacher1">
-                        <div class="teacherX"></div>
-                        <div class="teacher-card">
-                            <div class="portrait">
-                                <img src="static/images/teacher-sm2.png" alt="" />
-                            </div>
-                            <div class="now-left">
-                                <div class="name">
-                                    许焕琛
-                                </div>
-                                <div>
-                                    澳洲留学大百科创始人
-                                </div>
-                            </div>
+                        <div class="teacherX" style="transform: translateX(0px);"></div>
+                        <div class="name">
+                            Paula Stechschulte
                         </div>
-                    </div>
-                    <div class="now" data-teacher="teacher2">
                         <div class="teacher-card">
                             <div class="portrait">
                                 <img src="static/images/teacher-sm.png" alt="" />
                             </div>
                             <div class="now-left">
-                                <div class="name">
-                                    刘令涛
-                                </div>
                                 <div>
-                                    11年教育行业经验
+                                    在医疗护理和高等教育领域有着30多年的经验
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="now" data-teacher="teacher2">
+                        <div class="name">
+                            Karin Bogue
+                        </div>
+                        <div class="teacher-card">
+                            <div class="portrait">
+                                <img src="static/images/teacher-sm2.png" alt="" />
+                            </div>
+                            <div class="now-left">
+                                <div>
+                                    Karin博士是南方大学商学院的一名助理教授，也是一名有执照的律师
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="now" data-teacher="teacher3">
-                        <div class="teacher-card">
-                            <div class="portrait">
-                                <img src="static/images/teacher-sm4.png" alt="" />
-                            </div>
-                            <div class="now-left">
-                                <div class="name">
-                                    徐鲲
-                                </div>
-                                <div>
-                                    曾任中信益佰国际商学院副总
-                                </div>
-                            </div>
+                        <div class="name">
+                            Ruth Essler
                         </div>
-                    </div>
-                    <div class="now" data-teacher="teacher4">
                         <div class="teacher-card">
                             <div class="portrait">
                                 <img src="static/images/teacher-sm3.png" alt="" />
                             </div>
                             <div class="now-left">
-                                <div class="name">
-                                    司徒莎莉
-                                </div>
                                 <div>
-                                    中国人民大学工商管理硕士
+                                    2002年，Essler博士在萨凡纳校区从兼职教员做起，开始了她的教学生涯。任教至今已经超过15年
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="now" data-teacher="teacher4">
+                        <div class="name">
+                            Tom Javarinis
+                        </div>
+                        <div class="teacher-card">
+                            <div class="portrait">
+                                <img src="static/images/teacher-sm4.png" alt="" />
+                            </div>
+                            <div class="now-left">
+                                <div>
+                                    Tom博士是南方大学的一名助理教授。博士专业是组织发展和人力资源。
                                 </div>
                             </div>
                         </div>
@@ -308,7 +436,10 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
                 </div>
             </div>
         </div>
-    </div>
+
+
+
+
     <div id="culb">
         <p class="title">环球俱乐部</p>
         <p class="why">UNIVERSAL CLUB</p>
@@ -446,3 +577,71 @@ $this->metaTags[]="<meta name='description' content='".Yii::$app->params['web_de
         </ul>
     </div>
 </div>
+
+<script>
+    <?php $this->beginBlock('index') ?>
+$(document).ready(function(){
+    let teacherX = 0;
+    let x = document.getElementsByClassName('teacherX')[0];
+    $('.index-teacher .now').click(function() {
+        var teacher = $(this).attr('data-teacher');
+        $(this).addClass('active').siblings().removeClass('active');
+        if (teacher == 'teacher1') {
+            teacherX = 0;
+            x.style.transform = `translateX(${teacherX}px)`;
+            $('.teacher-detail').eq(0).addClass('show-teacher').siblings().removeClass('show-teacher');
+        }
+        if ((teacher == 'teacher2' && teacherX < 303) || teacherX > 303) {
+            teacherX = 303;
+            x.style.transform = `translateX(${teacherX}px)`;
+            $('.teacher-detail').eq(1).addClass('show-teacher').siblings().removeClass('show-teacher');
+        }
+        if ((teacher == 'teacher3' && teacherX < 606) || teacherX > 606) {
+            teacherX = 606;
+            x.style.transform = `translateX(${teacherX}px)`;
+            $('.teacher-detail').eq(2).addClass('show-teacher').siblings().removeClass('show-teacher');
+        }
+        if (teacher == 'teacher4' && teacherX < 909) {
+            teacherX = 909;
+            x.style.transform = `translateX(${teacherX}px)`;
+            $('.teacher-detail').eq(3).addClass('show-teacher').siblings().removeClass('show-teacher');
+        }
+    });
+
+	$('.tab li a').click(function() {
+		var id = $(this).attr('data-id');
+		$(this).children('.tab-text').addClass('active');
+		$(this).children('.tab-icon').addClass('tab-icon1 '+id+'-active-img');
+		$(this).parent().siblings().children().children('.tab-text').removeClass('active');
+		$(this).parent().siblings().children().children('.tab-icon').removeClass('tab-icon1');
+		document.getElementById(id).scrollIntoView();
+	});
+	
+	
+	let translationX = document.getElementsByClassName('translation')[0],translationNum = 0;
+      $('.switch-tab').click(function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        var school = $(this).attr('data-school');
+        if (school == 'aim') {
+          translationNum = 0
+          translationX.style.transform = `translateX(${translationNum}px)`;
+          $('.switch-container').eq(0).addClass('show-switch').siblings().removeClass('show-switch');
+        }
+        if ((school == 'aeu' && translationNum < 400) || translationNum > 400) {
+          translationNum = 400;
+          translationX.style.transform = `translateX(${translationNum}px)`;
+          $('.switch-container').eq(1).addClass('show-switch').siblings().removeClass('show-switch');
+        }
+        if (school == 'nus' && translationNum < 800) {
+          translationNum = 800;
+          translationX.style.transform = `translateX(${translationNum}px)`;
+          $('.switch-container').eq(2).addClass('show-switch').siblings().removeClass('show-switch');
+        }  
+      })
+	
+	
+	
+});
+    <?php $this->endBlock(); ?>
+</script>
+<?php $this->registerJs($this->blocks['index'],\yii\web\View::POS_END);?>

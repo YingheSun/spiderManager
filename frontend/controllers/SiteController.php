@@ -21,22 +21,6 @@ class SiteController extends BaseController
         return $this->render('index');
     }
 
-    /**
-    public function actionList()
-    {
-        if(Yii::$app->request->isAjax){
-            $message = new \frontend\models\Message();
-            if ($message->load(['message'=>Yii::$app->request->post()],'message') && $message->save()) {
-                return json_encode(['code'=>1001,'msg'=>'留言成功']);
-            } else {
-                return json_encode(['code'=>1002,'msg'=>$message->getFirstError('phone')]);
-            }
-        }else{
-            return $this->render('list');
-        }
-    }
-    **/
-
     //院校介绍
     public function actionShow()
     {
