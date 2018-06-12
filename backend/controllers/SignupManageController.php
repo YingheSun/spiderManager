@@ -39,7 +39,7 @@ class SignupManageController extends BaseController
 
         $searchModel = new SignupSearch();
         $search_condation = Yii::$app->request->queryParams;
-        $search_condation['SignupSearch']['status']=isset($search_condation['SignupSearch']['status'])?$search_condation['SignupSearch']['status']:7;
+        $search_condation['SignupSearch']['status']=isset($search_condation['SignupSearch']['status'])?$search_condation['SignupSearch']['status']:1;
         $dataProvider = $searchModel->search($search_condation);
         $number_count = new Signup();
         $number_count = $number_count->exec_number();
@@ -59,8 +59,21 @@ class SignupManageController extends BaseController
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id)
+    public function actionView($id,$current_step = 0,$update_state = false)
     {
+        if($update_state)
+        {
+            $state_change_model = $this->findModel($id);
+
+            if($current_step == $state_change_model->status){
+                $state_change_model->status = $state_change_model->status +1;
+                if($current_step == 5)
+                {
+                    $state_change_model->status = $state_change_model->status +1;
+                }
+            }
+            $state_change_model->save();
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -104,6 +117,20 @@ class SignupManageController extends BaseController
         ]);
     }
 
+    public function actionUpdate1($id)
+    {
+        $model = $this->findModel($id);
+//        $model->signup_step = implode(array_diff(str_split($model->signup_step),str_split($model->status)));
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['index', 'id' => $model->id]);
+        }
+
+        return $this->render('update1', [
+            'model' => $model,
+        ]);
+    }
+
     /**
      * Deletes an existing Signup model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
@@ -113,7 +140,8 @@ class SignupManageController extends BaseController
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+
 
         return $this->redirect(['index']);
     }

@@ -93,17 +93,17 @@ $this->params['breadcrumbs'][] = $this->title;
             [
             'attribute'=>'status',
             'value'=>function($data){
-                if($data->status == 7){
+                if($data->status == 1){
                     return '待审核';
                 }
-                if($data->status == 8){
+                if($data->status == 7){
                     return '审核通过';
                 }
-                if($data->status == 9){
+                if($data->status > 1 && $data->status < 7){
                     return '审核未通过';
                 }
             },
-            'filter'=>[7=>'待审核',8=>'审核通过',9=>'审核未通过']
+            'filter'=>[1=>'待审核',7=>'审核通过',2=>'审核未通过-个人信息',3=>'审核未通过-教育背景',4=>'审核未通过-工作背景',5=>'审核未通过-文件上传',6=>'审核未通过-当前无内容']
             ],
             //'status_reason:ntext',
             //'created_at',
