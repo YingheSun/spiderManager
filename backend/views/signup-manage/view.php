@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <table border="1">
     <?php if( $model->status == 1){?>
         <tr>
-            <td>个人照片：</td><td><img alt="" src="<?php echo $model->avatar ?>"/><br></td>
+            <td>个人照片：</td><td><img alt="" src="<?php echo $model->avatar ?>" height="320" width="480"/><br></td>
         <tr><tr>
             <td>真实姓名：</td><td><?php echo $model->real_name ?> <br></td>
         <tr><tr>
@@ -205,21 +205,21 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php } ?>
     <?php if( $model->status == 4){?>
         <tr>
-            <td>身份证正面：</td><td><img alt="" src="<?php echo $model->card_front ?>"/><br><td>
+            <td>身份证正面：</td><td><img alt="" src="<?php echo $model->card_front ?>" height="320" width="480"/><br><td>
         <tr><tr>
-            <td>身份证反面：</td><td><img alt="" src="<?php echo $model->card_back ?>"/><br><td>
+            <td>身份证反面：</td><td><img alt="" src="<?php echo $model->card_back ?>" height="320" width="480"/><br><td>
         <tr><tr>
-            <td>毕业证扫描件：</td><td><img alt="" src="<?php echo $model->diploma_scan ?>"/><br><td>
+            <td>毕业证扫描件：</td><td><img alt="" src="<?php echo $model->diploma_scan ?> " height="320" width="480"/><br><td>
         <tr><tr>
-            <td>研究生毕业证扫描件：</td><td><img alt="" src="<?php echo $model->postgraduate_diploma_scan ?>"/><br><td>
+            <td>研究生毕业证扫描件：</td><td><img alt="" src="<?php echo $model->postgraduate_diploma_scan ?>" height="320" width="480"/><br><td>
         <tr><tr>
-            <td>本科阶段成绩单：</td><td><img alt="" src="<?php echo $model->report_card ?>"/><br><td>
+            <td>本科阶段成绩单：</td><td><img alt="" src="<?php echo $model->report_card ?>" height="320" width="480"/><br><td>
         <tr><tr>
-            <td>研究生阶段成绩单：</td><td><img alt="" src="<?php echo $model->postgraduate_report_card ?>"/><br><td>
+            <td>研究生阶段成绩单：</td><td><img alt="" src="<?php echo $model->postgraduate_report_card ?>" height="320" width="480"/><br><td>
         <tr><tr>
             <td>中文简历：</td><td><a href="<?php echo $model->resume_chinese ?>">点我下载</a><br><td>
         <tr><tr>
-            <td>单位组织结构图：</td><td><img alt="" src="<?php echo $model->company_organization_chart ?>"/><br><td>
+            <td>单位组织结构图：</td><td><img alt="" src="<?php echo $model->company_organization_chart ?>" height="320" width="480"/><br><td>
         <tr><tr>
             <td>英文简历：</td><td><a  href="<?php echo $model->resume_english ?>">点我下载</a><br><td>
         <tr><tr>
