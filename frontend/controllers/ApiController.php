@@ -114,9 +114,6 @@ class ApiController extends BaseController
     }
 
     public function actionUpload(){
-		print_r($_FILES);
-		
-		
         $file=$_FILES['signup'];
         $type = Yii::$app->request->get('type','image');
         if($type == 'image'){
