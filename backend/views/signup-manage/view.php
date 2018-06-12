@@ -45,25 +45,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ]) ?>
         <?php } ?>
         <?php if( $model->status ==7){?>
-            <?= Html::a('完成审核,返回审核列表', ['index'], ['class' => 'btn btn-primary']) ?>
+            <?= Html::a('邮件发送完毕确认', ['view', 'id' => $model->id ,'current_step' => $model->status,'update_state' => true], ['class' => 'btn btn-primary']) ?>
+        <?php } ?>
+        <?php if( $model->status ==8){?>
+            <?= Html::a('缴费完毕确认', ['view', 'id' => $model->id ,'current_step' => $model->status,'update_state' => true], ['class' => 'btn btn-primary']) ?>
         <?php } ?>
     </p>
 
-<!--    --><?//= DetailView::widget([
-//        'model' => $model,
-//        'attributes' => [
-//            'id',
-//            'member_id',
-//            'academy_id',
-//            'avatar',
-//            'real_name',
-//            'card',
-//            'phone',
-//            'email:email',
-//
-//
-//        ],
-//    ]) ?>
     <table border="1">
     <?php if( $model->status == 1){?>
         <tr>
@@ -249,7 +237,13 @@ $this->params['breadcrumbs'][] = $this->title;
         答案3：<?php echo $model->answer_3 ?> <br>
     <?php } ?>
     <?php if($model->status == 7){?>
-        你已经完成了这个同学的审核
+        你已经完成了这个同学的审核，等待你去发送邮件
+    <?php } ?>
+    <?php if($model->status == 8){?>
+        你已经发送了邮件，等待这位同学缴费
+    <?php } ?>
+    <?php if($model->status == 9){?>
+        终于这位同学走完了全部流程
     <?php } ?>
     </table>
 

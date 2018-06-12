@@ -13,32 +13,8 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="signup-index">
 
-<!--    <h1>--><?//= Html::encode($this->title) ?><!--</h1>-->
     <h1> <?php echo( $number_count) ?></h1>
-<!--    <div class="box">-->
-<!--        <div class="box-body">-->
-<!--            <div class="row">-->
-<!--                <form action="/signup/backend/web/index.php?r=signup-manage/index" method="GET">-->
-<!--                    <div class="col-xs-2">-->
-<!--                    <select name="state">-->
-<!--                        <option value ="7">待审核</option>-->
-<!--                        <option value ="8">审核通过</option>-->
-<!--                        <option value="9">审核未通过</option>-->
-<!--                    </select>-->
-<!--                    </div>-->
-<!--		<div class="col-xs-2">-->
-<!--		  <button type="submit" class="btn bg-navy btn-flat">搜索</button>-->
-<!--		</div>-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </div>-->
 
-
-<!--    --><?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-<!--    <p>-->
-<!--        --><?//= Html::a('Create Signup', ['create'], ['class' => 'btn btn-success']) ?>
-<!--    </p>-->
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -99,11 +75,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 if($data->status == 7){
                     return '审核通过';
                 }
+                if($data->status == 8){
+                    return '邮件已发送，未缴费确认';
+                }
+                if($data->status == 9){
+                    return '缴费确认完成';
+                }
                 if($data->status > 1 && $data->status < 7){
                     return '审核未通过';
                 }
             },
-            'filter'=>[1=>'待审核',7=>'审核通过',2=>'审核未通过-个人信息',3=>'审核未通过-教育背景',4=>'审核未通过-工作背景',5=>'审核未通过-文件上传',6=>'审核未通过-当前无内容']
+            'filter'=>[1=>'待审核',7=>'审核通过',8=>'邮件已发送，未缴费确认',9=>'缴费确认完成',2=>'审核未通过-个人信息',3=>'审核未通过-教育背景',4=>'审核未通过-工作背景',5=>'审核未通过-文件上传',6=>'审核未通过-当前无内容']
             ],
             //'status_reason:ntext',
             //'created_at',
